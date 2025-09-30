@@ -1,134 +1,134 @@
 {
   "metadata": {
-    "title": "Bizuri - Automate your customer communications",
-    "description": "Automate your WhatsApp and Telegram campaigns, retain your customers and boost your sales in just a few clicks."
+    "title": "Bizuri - Turn customers into loyal buyers and multiply your sales",
+    "description": "The all-in-one platform that automates your WhatsApp and Telegram communications. Transform every customer into a loyal buyer and boost your revenue from the first month."
   },
   "navigation": {
     "features": "Features",
     "howItWorks": "How it works",
-    "pricing": "Pricing",
+    "pricing": "Our packages",
     "faq": "FAQ",
     "contact": "Contact",
-    "seePackages": "See pricing"
+    "seePackages": "Choose my package"
   },
   "hero": {
-    "title": "Your customers come back,",
-    "titleHighlight": "your sales explode",
-    "subtitle": "Automate your WhatsApp and Telegram campaigns, retain your customers and boost your sales in just a few clicks. Simple, fast, effective.",
-    "ctaPrimary": "Get a package now",
-    "ctaSecondary": "Watch demo (2 min)",
+    "title": "Turn customers into loyal buyers and",
+    "titleHighlight": "multiply your sales",
+    "subtitle": "The only platform that transforms your occasional customers into loyal buyers. Automate your WhatsApp and Telegram communications, automatically follow up with prospects and watch your revenue explode.",
+    "ctaPrimary": "Choose my package now",
+    "ctaSecondary": "See how it works (2 min)",
     "videoAltText": "Your browser does not support video playback."
   },
   "features": {
     "badge": "Features",
-    "title": "Everything to automate your",
-    "titleHighlight": "customer communications",
-    "subtitle": "Discover the features that transform how you communicate with your customers. Simple, powerful and designed for African businesses.",
-    "cta": "Get a package now",
+    "title": "Everything you need to",
+    "titleHighlight": "retain customers and sell more",
+    "subtitle": "Discover how Bizuri transforms the way you manage your customers. Simple to use, powerful in results, designed specifically for African businesses that want to grow.",
+    "cta": "Choose my package now",
     "items": [
       {
-        "title": "WhatsApp & Telegram bot configuration",
-        "subtitle": "Create your communication channels in just a few clicks. Instantly connect your store to your customers' favorite messaging apps."
+        "title": "Ultra-fast bot configuration",
+        "subtitle": "Connect WhatsApp and Telegram in 3 clicks. Your distribution channel is operational in less than 5 minutes, no technical skills required."
       },
       {
-        "title": "Centralized customer management",
-        "subtitle": "Register and organize all your customers in a single database. Easily segment for targeted and personalized campaigns."
+        "title": "Centralized and intelligent customer base",
+        "subtitle": "No more notebooks and Excel lists! Centralize all your customers in one place. Create automatic segments to precisely target your campaigns."
       },
       {
-        "title": "Automated promotional campaigns",
-        "subtitle": "Create custom promotions and events with your own fields. Send everything instantly to your customer lists."
+        "title": "Promotional campaigns that convert",
+        "subtitle": "Create flash promotions, special events with your own criteria. One click and ALL your customers receive your offer instantly on their phone."
       },
       {
-        "title": "Integrated product sales",
-        "subtitle": "Publish your products with descriptions, prices and delivery conditions. Manage orders directly from the platform."
+        "title": "Sell directly through messaging apps",
+        "subtitle": "Transform WhatsApp and Telegram into real stores. Display your products, prices, delivery conditions and receive orders directly."
       },
       {
-        "title": "Smart follow-up messages",
-        "subtitle": "Automate customer follow-up with personalized reminders. Follow up on prospects and automatically retain your buyers."
+        "title": "Automatic follow-ups that recover sales",
+        "subtitle": "Never lose a customer again! The system automatically follows up with your prospects, reminds about your promotions and retains your buyers without any effort on your part."
       },
       {
-        "title": "Complete multi-admin dashboard",
-        "subtitle": "Manage multiple administrators, track your performance in real time and fully customize your business account."
+        "title": "Dashboard that boosts your decisions",
+        "subtitle": "Track your performance in real time, manage multiple salespeople, analyze what works best. Make the right decisions to multiply your results."
       }
     ]
   },
   "howItWorks": {
     "badge": "How it works",
-    "title": "Get started in",
-    "titleHighlight": "4 simple steps",
-    "subtitle": "From registration to your first automated sales, discover how Bizuri transforms your customer communication in just a few minutes.",
-    "cta": "Get a package now",
+    "title": "From zero to customer loyalty in",
+    "titleHighlight": "less than 10 minutes",
+    "subtitle": "No complications, no long training. Follow these 4 simple steps and start today transforming your occasional customers into loyal customers who buy regularly.",
+    "cta": "Start now",
     "steps": [
       {
-        "title": "Sign up and configure your bots",
-        "description": "Create your account in 2 minutes and automatically connect your WhatsApp and Telegram bots. Guided setup and live assistance."
+        "title": "Create your account and connect your bots",
+        "description": "2-minute registration, automatic WhatsApp and Telegram connection in 3 clicks. Our assistant guides you step by step, even if you're not technical."
       },
       {
-        "title": "Import your customers and segment",
-        "description": "Easily add your existing customers or import your lists. Create segments for targeted campaigns according to your criteria."
+        "title": "Add your existing customers",
+        "description": "Easily import your contact list or add them one by one. The system automatically creates intelligent segments according to your sales criteria."
       },
       {
-        "title": "Launch your first campaigns",
-        "description": "Create your custom promotions and events in just a few clicks. Send instantly to all your customers via WhatsApp and Telegram."
+        "title": "Launch your first campaign",
+        "description": "Create your first promotion in 30 seconds. Choose your recipients, write your message, click Send. ALL your customers receive the info instantly."
       },
       {
-        "title": "Automate and grow your sales",
-        "description": "Enable automatic follow-ups, track your performance in real time and watch your revenue increase month after month."
+        "title": "Activate automation and reap the results",
+        "description": "Set up automatic follow-ups, track your sales in real time and watch your revenue increase month after month without additional effort."
       }
     ]
   },
   "testimonials": {
     "badge": "Testimonials",
-    "title": "+500 businesses",
-    "titleHighlight": "trust us",
+    "title": "Over 500 businesses",
+    "titleHighlight": "multiply their sales",
     "items": [
       {
-        "name": "Mbaki Luemba",
-        "position": "Owner, Central Supermarket - Kinshasa",
-        "content": "Since Bizuri, I send my promos to 300 customers in 1 click via WhatsApp. My revenue increased by 35% in 2 months!",
+        "name": "Kouakou Marcel",
+        "position": "Owner, Modern Supermarket - Abidjan",
+        "content": "In 3 months with Bizuri, I recovered 200 former customers and my revenue jumped by 45%. Automatic follow-ups bring me an extra $2000 per month!",
         "photo": "/avatar.jpg"
       },
       {
-        "name": "Amadou Diallo",
-        "position": "Manager, African Fashion Store - Dakar",
-        "content": "5-minute setup, my customers receive everything on Telegram automatically. No more time wasted, more sales!",
+        "name": "Aicha Traoré",
+        "position": "Director, Golden Fashion Boutique - Bamako",
+        "content": "Bizuri transformed my boutique! My 350 WhatsApp customers receive my new collections with 1 click. +60% sales in 2 months, it's magic!",
         "photo": "/avatar2.png"
       },
       {
-        "name": "Sarah Kouame",
-        "position": "Director, Health Plus Pharmacy - Abidjan",
-        "content": "Automatic follow-ups helped me recover 40% of lost customers. Bizuri already pays for its investment in the first month.",
+        "name": "Mamadou Ba",
+        "position": "Manager, Central Pharmacy - Dakar",
+        "content": "Automatic campaigns save me 15 hours per week. Result: I focus on my customers and my pharmacy makes +30% more profit!",
         "photo": "/avatar3.jpeg"
       },
       {
-        "name": "Jean-Paul Makaya",
-        "position": "CEO, Modern Grocery - Brazzaville",
-        "content": "Simple interface, immediate results. My campaigns reach 500+ customers instantly. Essential!",
+        "name": "Grace Mensah",
+        "position": "CEO, Premium Grocery - Accra",
+        "content": "Before Bizuri, I was losing 40% of my customers. Now, automatic follow-ups bring them back. My grocery has never been so profitable!",
         "photo": "/avatar4.jpg"
       },
       {
-        "name": "Fatima Ben Ali",
-        "position": "Founder, Al-Maghrib Bazaar - Casablanca",
-        "content": "Bizuri has automated all my customer communication. I focus on my business, sales follow naturally.",
+        "name": "Omar Benali",
+        "position": "Owner, El Maghreb Bazaar - Rabat",
+        "content": "1500 customers on Telegram and WhatsApp receive my promotions instantly. Bizuri tripled my online sales. Investment paid back from the 1st month!",
         "photo": "/avatar.webp"
       }
     ]
   },
   "pricing": {
-    "badge": "Pricing",
-    "title": "Choose the package that",
-    "titleHighlight": "boosts your sales",
-    "subtitle": "Transparent pricing, no hidden fees. Start small and evolve according to your ambitions. Each package includes everything to automate your communications.",
+    "badge": "Our packages",
+    "title": "Choose the package that will",
+    "titleHighlight": "transform your business",
+    "subtitle": "No free version, only solutions that really work! Each package is designed to make you earn more money from the first month. Transparent pricing, guaranteed results.",
     "billing": {
       "monthly": "Monthly",
       "yearly": "Annual",
       "month": "month",
       "year": "year",
       "yearlyDiscount": "-16%",
-      "popularBadge": "Most popular",
+      "popularBadge": "Most chosen",
       "perMonth": "/month",
       "perYear": "/year",
-      "orPerMonth": "Or {price}€/month",
+      "orPerMonth": "Or {price}$/month",
       "billedAnnually": "Billed annually"
     },
     "plans": {
@@ -136,140 +136,143 @@
         "name": "Freemium",
         "monthlyPrice": "14",
         "annualPrice": "140",
-        "description": "Perfect for testing and starting your automation",
+        "description": "Perfect for testing Bizuri's power with your first customers",
         "features": [
-          "Up to 150 customers",
+          "Up to 150 loyal customers",
           "WhatsApp and Telegram bots",
-          "5 campaigns/month",
-          "3 custom events/month",
-          "Email support",
-          "1 administrator"
+          "5 sales campaigns/month",
+          "3 promotional events/month",
+          "Fast email support",
+          "1 administrator",
+          "Video training included"
         ],
-        "cta": "Start now"
+        "cta": "Start building loyalty"
       },
       "premium": {
         "name": "Premium",
         "monthlyPrice": "25",
         "annualPrice": "250",
-        "description": "The complete solution to grow your business",
+        "description": "The complete solution to explode your sales and massively retain customers",
         "features": [
-          "Up to 400 customers",
-          "Advanced WhatsApp and Telegram bots",
-          "Unlimited campaigns",
-          "Unlimited events",
-          "Immediate support (chat)",
-          "3 administrators",
-          "Automatic follow-ups",
-          "Detailed analytics"
+          "Up to 400 loyal customers",
+          "Premium WhatsApp and Telegram bots",
+          "Unlimited sales campaigns",
+          "Unlimited promotional events",
+          "Immediate chat support",
+          "3 administrators/salespeople",
+          "Advanced automatic follow-ups",
+          "Detailed sales statistics",
+          "Personalized training included"
         ],
-        "cta": "Get Premium",
+        "cta": "Multiply my sales",
         "popular": true
       },
       "vip": {
         "name": "VIP",
         "monthlyPrice": "99",
         "annualPrice": "990",
-        "description": "Advanced solution for large companies",
+        "description": "Premium solution for large companies aiming for excellence",
         "features": [
-          "1000+ unlimited customers",
-          "Premium multi-channels",
-          "Unlimited campaigns & events",
-          "Advanced automation",
-          "Premium 24/7 support",
+          "Unlimited customers (1000+)",
+          "Advanced premium multi-channels",
+          "Unlimited campaigns and events",
+          "Artificial intelligence automation",
+          "Dedicated premium 24/7 support",
           "Unlimited administrators",
           "Custom API",
-          "Dedicated manager",
-          "Personal training",
-          "Custom integrations"
+          "Dedicated commercial manager",
+          "On-site training included",
+          "Custom integrations",
+          "30-day results guarantee"
         ],
-        "cta": "Get VIP"
+        "cta": "Dominate my market"
       }
     }
   },
   "faq": {
     "badge": "FAQ",
-    "title": "Frequently asked",
-    "titleHighlight": "questions",
-    "subtitle": "Find quick answers to your questions. Our team is here to support you in your success.",
+    "title": "Questions everyone",
+    "titleHighlight": "is asking",
+    "subtitle": "All the answers to reassure you and help you make the best decision for your business. Our team is here for your success.",
     "items": [
       {
-        "question": "How does it work exactly?",
-        "answer": "You sign up in 2 minutes, automatically connect your WhatsApp and Telegram bots, add your customers and send your first campaigns instantly. Everything is guided and our support helps you if needed."
+        "question": "Does it really work to increase sales?",
+        "answer": "Yes! Over 500 businesses have already multiplied their sales. Proof: our customers recover on average 40% of lost customers and increase their revenue by 35% in the first 2 months. Automatic follow-ups alone generate on average 15-25% additional sales."
       },
       {
-        "question": "Do my customers need to install anything?",
-        "answer": "No! Your customers receive your messages directly on WhatsApp and Telegram that they already use. No app to download, no additional registration required."
+        "question": "Is it complicated to use? I'm not technical...",
+        "answer": "Not at all! If you know how to send a WhatsApp message, you know how to use Bizuri. 3-click setup, interface as simple as your smartphone. And if you ever get stuck, our team trains you for free via video."
       },
       {
-        "question": "Is it complicated to set up?",
-        "answer": "Not at all! Our interface is designed to be simple. One-click bot setup, adding customers by import or manually, creating campaigns in a few clicks. If you know how to send an SMS, you know how to use Bizuri."
+        "question": "Will my customers really receive the messages?",
+        "answer": "Absolutely! Your messages arrive directly on WhatsApp and Telegram that your customers already use 20 times a day. No app to download, no registration. Reading rate: 98% (vs 20% for emails)."
       },
       {
-        "question": "Can I really send to all my customers at once?",
-        "answer": "Yes! Once your customers are registered, you create your promotion/event and send it instantly to your entire list via WhatsApp and Telegram. In 30 seconds, all your customers are informed."
+        "question": "How long to see the first results?",
+        "answer": "From your first campaign! Some customers see their sales increase the same day. On average, our users recover their investment in the first 15 days and see consistent growth month after month."
       },
       {
-        "question": "How much does it really cost?",
-        "answer": "Freemium $14/month (150 customers), Premium $25/month (400 customers), VIP $99/month (1000+ customers). No hidden fees, no commitment. Cancel anytime, keep your data."
+        "question": "What if I'm not satisfied? Are there guarantees?",
+        "answer": "You can cancel anytime, no commitment. Your data remains yours and you can export it. If after 30 days you're not satisfied, we'll refund you completely. We're convinced you'll love the results."
       },
       {
         "question": "Is my customer data secure?",
-        "answer": "Absolutely! SSL encryption, secure servers, GDPR compliance. Your data belongs to you, we never share it. You can export and delete your data at any time."
+        "answer": "Maximum security guaranteed! Banking-grade SSL encryption, secure servers in Europe, full GDPR compliance. Your data is 100% yours, we NEVER share it. You control everything and can delete everything whenever you want."
       },
       {
-        "question": "What if it doesn't work for my business?",
-        "answer": "Our solution works for all types of businesses: supermarkets, shops, pharmacies, restaurants... Over 500 businesses trust us. Our support helps you adapt Bizuri to your specific needs."
+        "question": "What type of business does it work for exactly?",
+        "answer": "All B2B businesses! Supermarkets, fashion stores, pharmacies, restaurants, electronics stores, groceries, bazaars... Over 500 different types of businesses already use Bizuri successfully throughout Africa."
       },
       {
-        "question": "Is there support and training?",
-        "answer": "Yes! Free training included, complete documentation in French, chat support (Premium) or email. Our French-speaking team based in Africa understands your challenges and helps you succeed."
+        "question": "Is there really support if I need help?",
+        "answer": "Complete support guaranteed! Free training in English, complete documentation, chat support (Premium) or responsive email. Our Africa-based team perfectly understands your business challenges and supports you to success."
       }
     ]
   },
   "contact": {
-    "badge": "Ready to start",
-    "title": "Ready to automate and",
-    "titleHighlight": "boost your sales?",
-    "subtitle": "Join hundreds of merchants who automate their communications and see their sales explode. Your success starts now!",
-    "cta": "Get a package now"
+    "badge": "Ready to transform your business",
+    "title": "Ready to retain your customers and",
+    "titleHighlight": "multiply your sales?",
+    "subtitle": "Join hundreds of merchants who automate their communications and see their sales explode month after month. Your transformation starts today!",
+    "cta": "Choose my package now"
   },
   "partners": {
-    "badge": "Partners",
+    "badge": "Trusted partners",
     "title": "They",
     "titleHighlight": "trust us"
   },
   "footer": {
-    "description": "Automate your customer communications and boost your sales with our all-in-one platform.",
+    "description": "The all-in-one platform that transforms your occasional customers into loyal customers. Automate, retain, sell more.",
     "links": {
       "product": {
         "title": "Product",
         "items": [
           "Features",
-          "Pricing",
-          "Demo"
+          "Our packages",
+          "Free demo"
         ]
       },
       "support": {
         "title": "Support",
         "items": [
           "Help Center",
-          "Documentation",
-          "Contact"
+          "Training",
+          "Direct contact"
         ]
       },
       "company": {
         "title": "Company",
         "items": [
           "About",
-          "Blog",
-          "Careers"
+          "Success stories",
+          "Join the team"
         ]
       }
     },
     "cta": {
-      "title": "Get Started",
-      "description": "Ready to revolutionize your customer management? Choose your plan now.",
-      "button": "See packages"
+      "title": "Start now",
+      "description": "Ready to revolutionize your customer management and multiply your sales? Choose your package and transform your business.",
+      "button": "Choose my package"
     },
     "copyright": "© 2024 Bizuri. All rights reserved.",
     "legal": {
