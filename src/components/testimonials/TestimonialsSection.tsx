@@ -84,7 +84,7 @@ export function TestimonialsSection() {
             testimonials.map((t, idx) => (
               <div
                 key={`top-${groupIndex}-${idx}`}
-                className="relative bg-black text-white rounded-xl p-6 w-[300px] h-[280px] flex flex-col justify-between flex-shrink-0 shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+                className="relative bg-black text-white rounded-xl p-6 w-[300px] h-auto min-h-[260px] flex flex-col justify-between flex-shrink-0 shadow-lg overflow-hidden transition-transform duration-300"
               >
                 {/* Content */}
                 <div className="relative z-10 flex flex-col h-full justify-between">
@@ -106,12 +106,12 @@ export function TestimonialsSection() {
                   </div>
                   
                   {/* Citation alignée à gauche - centrée verticalement */}
-                  <div className="flex-1 flex items-center">
-                    <p className="text-base text-gray-200 text-left">&quot;{t.content}&quot;</p>
+                  <div className="flex-1 flex items-start">
+                    <p className="text-base text-gray-200 text-left line-clamp-3 max-h-[4.5rem] overflow-hidden">&quot;{t.content}&quot;</p>
                   </div>
                   
                   {/* Étoiles alignées à gauche */}
-                  <div className="flex mt-2">
+                  <div className="flex mt-3 items-center">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <StarFull key={i} />
                     ))}
@@ -135,7 +135,7 @@ export function TestimonialsSection() {
             testimonials.map((t, idx) => (
               <div
                 key={`bottom-${groupIndex}-${idx}`}
-                className="relative bg-black text-white rounded-xl p-6 w-[300px] h-[280px] flex flex-col justify-between flex-shrink-0 shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
+                className="relative bg-black text-white rounded-xl p-6 w-[300px] h-auto min-h-[260px] flex flex-col justify-between flex-shrink-0 shadow-lg overflow-hidden transition-transform duration-300"
               >
                 {/* Content */}
                 <div className="relative z-10 flex flex-col h-full justify-between">
@@ -157,12 +157,12 @@ export function TestimonialsSection() {
                   </div>
                   
                   {/* Citation alignée à gauche - centrée verticalement */}
-                  <div className="flex-1 flex items-center">
-                    <p className="text-base text-gray-200 text-left">&quot;{t.content}&quot;</p>
+                  <div className="flex-1 flex items-start">
+                    <p className="text-base text-gray-200 text-left line-clamp-3 max-h-[4.5rem] overflow-hidden">&quot;{t.content}&quot;</p>
                   </div>
                   
                   {/* Étoiles alignées à gauche */}
-                  <div className="flex mt-2">
+                  <div className="flex mt-3 items-center">
                     {Array.from({ length: 5 }).map((_, i) => (
                       <StarFull key={i} />
                     ))}

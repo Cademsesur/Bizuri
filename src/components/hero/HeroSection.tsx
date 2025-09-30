@@ -24,8 +24,8 @@ export function HeroSection() {
 
       {/* Content avec animations */}
       <div className={`relative max-w-7xl mx-auto z-10 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-        {/* Heading avec gradient text - Responsive optimisé */}
-        <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-white mb-6 sm:mb-6 md:mb-8 leading-[1.1] sm:leading-tight tracking-tight transition-all duration-700 px-2 sm:px-4 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
+  {/* Heading avec gradient text - Responsive optimisé */}
+  <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl 2xl:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-white mb-6 sm:mb-6 md:mb-8 leading-[1.05] sm:leading-tight tracking-tight transition-all duration-700 px-2 sm:px-4 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
             style={{animationDelay: '0.4s'}}>
           <span className="block break-words">
             {t('title')}
@@ -36,7 +36,7 @@ export function HeroSection() {
         </h1>
 
         {/* Subtitle améliorée - Responsive optimisé */}
-        <p className={`text-black/80 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-10 sm:mb-10 md:mb-12 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto leading-relaxed font-medium transition-all duration-700 px-2 sm:px-4 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
+  <p className={`text-black/80 text-lg sm:text-xl md:text-2xl lg:text-lg xl:text-xl mb-10 sm:mb-10 md:mb-12 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto leading-relaxed font-medium transition-all duration-700 px-2 sm:px-4 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
            style={{animationDelay: '0.6s'}}>
           {t('subtitle')}
         </p>
