@@ -3,17 +3,20 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from 'next-intl';
+import LanguageSelector from "@/components/ui/LanguageSelector";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const t = useTranslations('navigation');
 
   const navItems = [
-    { name: "Fonctionnalités", href: "#features" },
-    { name: "Comment ça marche", href: "#how-it-works" },
-    { name: "Tarifs", href: "#pricing" },
-    { name: "FAQ", href: "#faq" },
-    { name: "Contact", href: "#contact" },
+    { name: t('features'), href: "#features" },
+    { name: t('howItWorks'), href: "#how-it-works" },
+    { name: t('pricing'), href: "#pricing" },
+    { name: t('faq'), href: "#faq" },
+    { name: t('contact'), href: "#contact" },
   ];
 
   useEffect(() => {
@@ -79,6 +82,7 @@ export default function Header() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center gap-4">
+          <LanguageSelector />
           <motion.a
             href="#pricing"
             className="px-6 py-3 rounded-full font-bold transition-all duration-150 cursor-pointer bg-[#FACC15] text-black hover:bg-[#F59E0B]"
@@ -86,7 +90,7 @@ export default function Header() {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}
           >
-            Voir les tarifs
+            {t('seePackages')}
           </motion.a>
         </div>
 
@@ -136,6 +140,10 @@ export default function Header() {
               </motion.a>
             ))}
             
+            <div className="mt-4">
+              <LanguageSelector />
+            </div>
+            
             <motion.a
               href="#pricing"
               className="block mt-4 px-6 py-3 rounded-full text-center font-bold transition-all duration-150 cursor-pointer bg-[#FACC15] text-black hover:bg-[#F59E0B]"
@@ -146,7 +154,7 @@ export default function Header() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
             >
-              Voir les tarifs
+              {t('seePackages')}
             </motion.a>
           </motion.nav>
         )}

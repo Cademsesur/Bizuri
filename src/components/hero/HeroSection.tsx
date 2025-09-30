@@ -1,10 +1,12 @@
 "use client"
 import { Play, ArrowRight } from "lucide-react"
 import { useState, useEffect, useRef } from "react"
+import { useTranslations } from 'next-intl'
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
+  const t = useTranslations('hero')
   
   useEffect(() => {
     setIsVisible(true)
@@ -28,16 +30,16 @@ export function HeroSection() {
         {/* Heading avec gradient text */}
         <h1 className={`text-5xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-white mb-8 leading-tight tracking-tight transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
             style={{animationDelay: '0.4s'}}>
-          Vos clients reviennent,
+          {t('title')}
           <span className="block text-black font-extrabold">
-            vos ventes explosent
+            {t('titleHighlight')}
           </span>
         </h1>
 
         {/* Subtitle améliorée */}
         <p className={`text-black/80 text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed font-medium transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
            style={{animationDelay: '0.6s'}}>
-          Automatisez vos campagnes WhatsApp et Telegram, fidélisez votre clientèle et <span className="font-bold text-black">boostez vos ventes en quelques clics.</span> Simple, rapide, efficace.
+          {t('subtitle')}
         </p>
 
         {/* CTA Buttons améliorés */}
@@ -46,8 +48,8 @@ export function HeroSection() {
           
           <a href="#pricing" 
              className="group bg-black text-[#FACC15] hover:bg-gray-900 transition-all duration-300 rounded-full px-6 sm:px-8 md:px-10 py-3 md:py-4 text-base sm:text-lg md:text-xl font-bold inline-flex items-center hover:scale-105 transform border-2 border-black/20 whitespace-nowrap w-full sm:w-auto justify-center cursor-pointer">
-            <span className="hidden sm:inline">Prendre un pack maintenant</span>
-            <span className="sm:hidden">Prendre un pack maintenant</span>
+            <span className="hidden sm:inline">{t('ctaPrimary')}</span>
+            <span className="sm:hidden">{t('ctaPrimary')}</span>
             <ArrowRight className="w-5 h-5 md:w-6 md:h-6 ml-2 md:ml-3 transition-transform group-hover:translate-x-1" />
           </a>
 
@@ -63,8 +65,8 @@ export function HeroSection() {
             <div className="w-6 h-6 md:w-8 md:h-8 mr-2 md:mr-3 bg-black rounded-full flex items-center justify-center">
               <Play className="w-3 h-3 md:w-4 md:h-4 text-white fill-white ml-0.5" />
             </div>
-            <span className="hidden sm:inline">Voir la démo (2 min)</span>
-            <span className="sm:hidden">Voir la démo (2 min)</span>
+            <span className="hidden sm:inline">{t('ctaSecondary')}</span>
+            <span className="sm:hidden">{t('ctaSecondary')}</span>
           </button>
         </div>
 
@@ -84,7 +86,7 @@ export function HeroSection() {
                   controls
                 >
                   <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
-                  Votre navigateur ne supporte pas la lecture de vidéos.
+                  {t('videoAltText')}
                 </video>
                 
                 {/* Floating Elements sur la vidéo */}

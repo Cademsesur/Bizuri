@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Handshake } from "lucide-react";
+import { useTranslations } from 'next-intl';
 
 // Exemple de logos : remplace par tes images réelles
 const logos = [
@@ -14,6 +15,7 @@ const logos = [
 ];
 
 export function PartnersSection() {
+  const t = useTranslations('partners');
 
   return (
     <section className="w-full py-12 md:py-16 lg:py-20 bg-white">
@@ -21,13 +23,13 @@ export function PartnersSection() {
      <div className="text-center mb-8 md:mb-12 lg:mb-16 px-4 md:px-6 lg:px-8">
         <div className="inline-flex items-center gap-3 bg-black/5 text-black px-6 py-3 rounded-full text-sm font-medium mb-8 border border-black/10">
           <Handshake className="w-5 h-5 text-[#FACC15]" />
-          <span>Partenaires</span>
+          <span>{t('badge')}</span>
         </div>
         
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 leading-tight">
-            Ils nous font{' '}
+            {t('title')}{' '}
             <span className="text-[#FACC15]">
-              confiance
+              {t('titleHighlight')}
             </span>
         </h2>
      </div>

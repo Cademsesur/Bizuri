@@ -3,69 +3,44 @@
 import React, { useState, useCallback } from 'react';
 import { Check, Zap, Users, Crown } from 'lucide-react';
 import confetti from "canvas-confetti";
+import { useTranslations } from 'next-intl';
 
 const Pricing = () => {
   const [isAnnual, setIsAnnual] = useState(false);
+  const t = useTranslations('pricing');
 
   const plans = [
     {
-      name: "Freemium",
-      monthlyPrice: "14",
-      annualPrice: "140",
-      description: "Parfait pour tester et démarrer votre automatisation",
+      name: t('plans.freemium.name'),
+      monthlyPrice: t('plans.freemium.monthlyPrice'),
+      annualPrice: t('plans.freemium.annualPrice'),
+      description: t('plans.freemium.description'),
       icon: Zap,
-      features: [
-        "Jusqu'à 150 clients",
-        "Bots WhatsApp et Telegram",
-        "5 campagnes/mois",
-        "3 événements personnalisés/mois",
-        "Support par email",
-        "1 administrateur"
-      ],
+      features: t.raw('plans.freemium.features'),
       isPopular: false,
-      buttonText: "Commencer maintenant",
+      buttonText: t('plans.freemium.cta'),
       buttonStyle: "bg-black text-white hover:bg-black/90"
     },
     {
-      name: "Premium",
-      monthlyPrice: "25",
-      annualPrice: "250",
-      description: "La solution complète pour développer votre business",
+      name: t('plans.premium.name'),
+      monthlyPrice: t('plans.premium.monthlyPrice'),
+      annualPrice: t('plans.premium.annualPrice'),
+      description: t('plans.premium.description'),
       icon: Users,
-      features: [
-        "Jusqu'à 400 clients",
-        "Bots WhatsApp et Telegram avancés",
-        "Campagnes illimitées",
-        "Événements illimités",
-        "Support immédiat (chat)",
-        "3 administrateurs",
-        "Relances automatiques",
-        "Analytics détaillés"
-      ],
+      features: t.raw('plans.premium.features'),
       isPopular: true,
-      buttonText: "Prendre Premium",
+      buttonText: t('plans.premium.cta'),
       buttonStyle: "bg-[#FACC15] text-black hover:bg-[#FACC15]/90"
     },
     {
-      name: "VIP",
-      monthlyPrice: "99",
-      annualPrice: "990",
-      description: "Solution avancée pour les grandes entreprises",
+      name: t('plans.vip.name'),
+      monthlyPrice: t('plans.vip.monthlyPrice'),
+      annualPrice: t('plans.vip.annualPrice'),
+      description: t('plans.vip.description'),
       icon: Crown,
-      features: [
-        "1000+ clients illimités",
-        "Multi-canaux premium",
-        "Campagnes & événements illimités",
-        "Automatisation avancée",
-        "Support premium 24/7",
-        "Administrateurs illimités",
-        "API personnalisée",
-        "Manager dédié",
-        "Formation personnalisée",
-        "Intégrations sur mesure"
-      ],
+      features: t.raw('plans.vip.features'),
       isPopular: false,
-      buttonText: "Prendre VIP",
+      buttonText: t('plans.vip.cta'),
       buttonStyle: "bg-black text-white hover:bg-black/90"
     }
   ];
@@ -99,20 +74,20 @@ const Pricing = () => {
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <div className="inline-flex items-center gap-3 bg-white/10 text-white px-6 py-3 rounded-full text-sm font-medium mb-8 border border-white/20">
             <Crown className="w-5 h-5 text-[#FACC15]" />
-            <span>Tarification</span>
+            <span>{t('badge')}</span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
-            Choisissez le pack qui <span className="text-[#FACC15]">booste vos ventes</span>
+            {t('title')} <span className="text-[#FACC15]">{t('titleHighlight')}</span>
           </h1>
           <p className="text-lg md:text-xl text-white/80 max-w-4xl mx-auto leading-relaxed font-medium mb-8">
-            Des tarifs transparents, pas de frais cachés. Commencez petit et évoluez selon vos ambitions. Chaque pack inclut tout pour automatiser vos communications.
+            {t('subtitle')}
           </p>
 
           {/* Switch mensuel/annuel */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <span className={`font-medium transition-colors duration-300 ${!isAnnual ? 'text-white' : 'text-white/60'}`}>
-              Mensuel
+              {t('billing.monthly')}
             </span>
             <button
               onClick={handleSwitchChange}
@@ -127,9 +102,9 @@ const Pricing = () => {
               />
             </button>
             <span className={`font-medium transition-colors duration-300 ${isAnnual ? 'text-white' : 'text-white/60'}`}>
-              Annuel
+              {t('billing.yearly')}
               <span className="ml-2 text-xs bg-[#FACC15] text-black px-2 py-1 rounded-full font-bold">
-                -16%
+                {t('billing.yearlyDiscount')}
               </span>
             </span>
           </div>
@@ -144,7 +119,7 @@ const Pricing = () => {
                 key={index}
                 className={`relative rounded-2xl p-8 transition-all duration-300 hover:scale-105 ${
                   plan.isPopular 
-                    ? 'bg-white border-2 border-[#FACC15] shadow-2xl shadow-[#FACC15]/20' 
+                    ? 'bg-white border-2 border-[#FACC15] shadow-2xl shadow-[#FACC15]/20'
                     : 'bg-white/10 backdrop-blur-lg border border-white/20'
                 } overflow-hidden`}
               >
@@ -152,7 +127,7 @@ const Pricing = () => {
                 {plan.isPopular && (
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                     <div className="bg-[#FACC15] text-black px-6 py-2 rounded-full text-sm font-bold">
-                      Le plus populaire
+                      {t('billing.popularBadge')}
                     </div>
                   </div>
                 )}
@@ -192,21 +167,21 @@ const Pricing = () => {
                       <span className={`text-xl ml-2 ${
                         plan.isPopular ? 'text-black/60' : 'text-white/60'
                       }`}>
-                        {isAnnual ? '/an' : '/mois'}
+                        {isAnnual ? t('billing.perYear') : t('billing.perMonth')}
                       </span>
                     </div>
                     {isAnnual && (
                       <div className={`text-sm ${
                         plan.isPopular ? 'text-black/70' : 'text-white/70'
                       }`}>
-                        Soit {Math.round(parseInt(plan.annualPrice) / 12)}€/mois
+                        {t('billing.orPerMonth', { price: Math.round(parseInt(plan.annualPrice) / 12) })}
                       </div>
                     )}
                   </div>
 
                   {/* Features */}
                   <ul className="space-y-4 mb-8">
-                    {plan.features.map((feature, featureIndex) => (
+                    {plan.features.map((feature: string, featureIndex: number) => (
                       <li key={featureIndex} className="flex items-start">
                         <Check className={`w-5 h-5 mr-3 mt-0.5 flex-shrink-0 ${
                           plan.isPopular ? 'text-[#FACC15]' : 'text-[#FACC15]'
@@ -229,8 +204,6 @@ const Pricing = () => {
             );
           })}
         </div>
-
-
       </div>
     </section>
   );

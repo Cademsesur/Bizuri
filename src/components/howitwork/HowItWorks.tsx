@@ -2,42 +2,33 @@
 
 import { useRef } from 'react';
 import { UserPlus, CreditCard, Gift, TrendingUp, Users } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 const HowItWorksSection = () => {
-  const blocksData = [
-    {
-      id: 1,
-      icon: <UserPlus className="w-8 h-8 text-white" />,
-      title: "Inscrivez-vous et configurez vos bots",
-      description: "Créez votre compte en 2 minutes et connectez automatiquement vos bots WhatsApp et Telegram. Configuration guidée et assistance en direct.",
-      videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-      reverse: false
-    },
-    {
-      id: 2,
-      icon: <CreditCard className="w-8 h-8 text-white" />,
-      title: "Importez vos clients et segmentez",
-      description: "Ajoutez facilement vos clients existants ou importez vos listes. Créez des segments pour des campagnes ciblées selon vos critères.",
-      videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-      reverse: true
-    },
-    {
-      id: 3,
-      icon: <Gift className="w-8 h-8 text-white" />,
-      title: "Lancez vos premières campagnes",
-      description: "Créez vos promotions et événements personnalisés en quelques clics. Envoyez instantanément à tous vos clients via WhatsApp et Telegram.",
-      videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-      reverse: false
-    },
-    {
-      id: 4,
-      icon: <TrendingUp className="w-8 h-8 text-white" />,
-      title: "Automatisez et développez vos ventes",
-      description: "Activez les relances automatiques, suivez vos performances en temps réel et regardez votre chiffre d'affaires augmenter mois après mois.",
-      videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-      reverse: true
-    }
+  const t = useTranslations('howItWorks');
+
+  const iconMap = [UserPlus, CreditCard, Gift, TrendingUp];
+  
+  const stepsData = [
+    { title: t('steps.0.title'), description: t('steps.0.description') },
+    { title: t('steps.1.title'), description: t('steps.1.description') },
+    { title: t('steps.2.title'), description: t('steps.2.description') },
+    { title: t('steps.3.title'), description: t('steps.3.description') },
   ];
+  
+  const blocksData = stepsData.map((step, index) => ({
+    id: index + 1,
+    IconComponent: iconMap[index],
+    title: step.title,
+    description: step.description,
+    videoSrc: [
+      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
+      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
+      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4"
+    ][index],
+    reverse: index % 2 === 1
+  }));
 
   const VideoPlayer = ({ src }: { src: string }) => {
     const videoRef = useRef(null);
@@ -76,14 +67,14 @@ const HowItWorksSection = () => {
         <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="inline-flex items-center gap-3 bg-black/5 text-black px-6 py-3 rounded-full text-sm font-medium mb-8 border border-black/10">
             <Users className="w-5 h-5 text-[#FACC15]" />
-            <span>Comment ça marche</span>
+            <span>{t('badge')}</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 leading-tight">
-            Démarrez en <span className="text-[#FACC15]">4 étapes simples</span>
+            {t('title')} <span className="text-[#FACC15]">{t('titleHighlight')}</span>
           </h2>
           <p className="text-lg md:text-xl text-black/80 leading-relaxed font-medium max-w-3xl mx-auto">
-            De l&apos;inscription à vos premières ventes automatisées, découvrez comment Bizuri transforme votre communication client en quelques minutes.
+            {t('subtitle')}
           </p>
         </div>
       </div>
@@ -111,7 +102,7 @@ const HowItWorksSection = () => {
                   <div className="flex items-center space-x-4">
                     <div className="w-16 h-16 bg-[#FACC15] rounded-2xl flex items-center justify-center shadow-lg">
                       <div className="w-8 h-8">
-                        {block.icon}
+                        <block.IconComponent className="w-8 h-8 text-white" />
                       </div>
                     </div>
                     <span className="text-4xl font-black text-[#FACC15]">
@@ -128,7 +119,7 @@ const HowItWorksSection = () => {
                   </p>
                   
                   <a href="#pricing" className="group inline-flex items-center space-x-3 bg-[#FACC15] hover:bg-[#F59E0B] text-black font-bold px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 cursor-pointer">
-                    <span>Prendre un pack maintenant</span>
+                    <span>{t('cta')}</span>
                     <svg className="w-4 h-4 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>

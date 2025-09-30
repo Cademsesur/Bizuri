@@ -4,12 +4,12 @@ import Header from "@/components/header/Header";
 import { HeroSection } from "@/components/hero/HeroSection";
 import Features from "@/components/features/Features";
 import HowItWorksSection from "@/components/howitwork/HowItWorks";
+import { PartnersSection } from "@/components/partners/PartnersSection";
 import { TestimonialsSection } from "@/components/testimonials/TestimonialsSection";
 import Pricing from "@/components/pricing/Pricing";
 import FAQ from "@/components/faq/Faq";
-import CallToAction from "@/components/contact/ContactSection";
+import ContactSection from "@/components/contact/ContactSection";
 import { Footer } from "@/components/footer/Footer";
-// import { PartnersSection } from "@/components/partners/PartnersSection";
 
 export default function HomePage() {
   return (
@@ -17,26 +17,25 @@ export default function HomePage() {
       <Header />
       <main>
         <HeroSection />
-       
         <section id="features">
           <Features />
         </section>
         <section id="how-it-works">
           <HowItWorksSection />
         </section>
-        <TestimonialsSection />
+        <PartnersSection />
+        <TestimonialsSection /> 
         <section id="pricing">
           <Pricing />
-        </section>
-         {/* <PartnersSection /> */}
+        </section> 
         <section id="faq">
           <FAQ />
         </section>
         <section id="contact">
-          <CallToAction />
-        </section>
+          <ContactSection />
+        </section> 
       </main>
-       <Footer /> 
+      <Footer /> 
     </div>
   );
 }

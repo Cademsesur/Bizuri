@@ -1,8 +1,13 @@
+'use client';
+
 import React from 'react';
 import { Star, Crown } from 'lucide-react';
 import Image from 'next/image';
+import { useTranslations } from 'next-intl';
 
-const CallToAction = () => {
+const ContactSection = () => {
+  const t = useTranslations('contact');
+  
   const avatars = [
     '/avatar.png',
     '/avatar2.png', 
@@ -55,26 +60,25 @@ const CallToAction = () => {
 
           <div className="inline-flex items-center gap-3 bg-white/10 text-white px-6 py-3 rounded-full text-sm font-medium mb-8 border border-white/20">
             <Crown className="w-5 h-5 text-[#FACC15]" />
-            <span>Prêt à commencer</span>
+            <span>{t('badge')}</span>
           </div>
           
           {/* Titre d'appel à l'action */}
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 leading-tight">
-            Prêt à automatiser et{' '}
+            {t('title')}{' '}
             <span className="text-[#FACC15]">
-              booster vos ventes ?
+              {t('titleHighlight')}
             </span>
           </h3>
           
           {/* Sous-titre d'appel à l'action */}
           <p className="text-lg md:text-xl text-white/70 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Rejoignez les centaines de commerçants qui automatisent leurs communications et voient leurs ventes exploser. 
-            Votre succès commence maintenant !
+            {t('subtitle')}
           </p>
           
           {/* Bouton principal */}
           <a href="#pricing" className="bg-[#FACC15] text-black hover:bg-[#F59E0B] transition-all duration-300 rounded-full px-8 md:px-10 lg:px-12 py-3 md:py-4 lg:py-5 text-base md:text-lg lg:text-xl font-bold hover:scale-105 transform cursor-pointer inline-block">
-            Prendre un pack maintenant
+            {t('cta')}
           </a>
           
         </div>
@@ -83,4 +87,4 @@ const CallToAction = () => {
   );
 };
 
-export default CallToAction;
+export default ContactSection;

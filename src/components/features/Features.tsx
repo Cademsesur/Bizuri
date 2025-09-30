@@ -1,39 +1,32 @@
 import React from 'react';
 import { MessageSquare, Users, Megaphone, ShoppingCart, Bell, BarChart3 } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+
+interface FeatureItem {
+  title: string;
+  subtitle: string;
+  icon: React.ComponentType<{ className?: string }>;
+}
 
 const Features = () => {
-  const features = [
-    {
-      title: "Configuration bots WhatsApp & Telegram",
-      subtitle: "Créez vos canaux de communication en quelques clics. Connectez votre boutique instantanément aux messageries préférées de vos clients.",
-      icon: MessageSquare
-    },
-    {
-      title: "Gestion clientèle centralisée",
-      subtitle: "Enregistrez et organisez tous vos clients dans une base unique. Segmentez facilement pour des campagnes ciblées et personnalisées.",
-      icon: Users
-    },
-    {
-      title: "Campagnes promotionnelles automatisées",
-      subtitle: "Créez des promotions et événements personnalisés avec vos propres champs. Envoyez tout instantanément à vos listes clients.",
-      icon: Megaphone
-    },
-    {
-      title: "Vente de produits intégrée",
-      subtitle: "Publiez vos produits avec descriptions, prix et conditions de livraison. Gérez les commandes directement depuis la plateforme.",
-      icon: ShoppingCart
-    },
-    {
-      title: "Messages de relance intelligents",
-      subtitle: "Automatisez le suivi client avec des rappels personnalisés. Relancez les prospects et fidélisez automatiquement vos acheteurs.",
-      icon: Bell
-    },
-    {
-      title: "Dashboard complet multi-admin",
-      subtitle: "Gérez plusieurs administrateurs, suivez vos performances en temps réel et personnalisez entièrement votre compte entreprise.",
-      icon: BarChart3
-    }
+  const t = useTranslations('features');
+
+  const iconMap = [MessageSquare, Users, Megaphone, ShoppingCart, Bell, BarChart3];
+  
+  // Récupération directe des données depuis les traductions
+  const featuresData = [
+    { title: t('items.0.title'), subtitle: t('items.0.subtitle') },
+    { title: t('items.1.title'), subtitle: t('items.1.subtitle') },
+    { title: t('items.2.title'), subtitle: t('items.2.subtitle') },
+    { title: t('items.3.title'), subtitle: t('items.3.subtitle') },
+    { title: t('items.4.title'), subtitle: t('items.4.subtitle') },
+    { title: t('items.5.title'), subtitle: t('items.5.subtitle') },
   ];
+  
+  const features: FeatureItem[] = featuresData.map((item, index) => ({
+    ...item,
+    icon: iconMap[index]
+  }));
 
   return (
     <section className="w-full py-16 md:py-20 lg:py-24 bg-white">
@@ -42,20 +35,20 @@ const Features = () => {
         <div className="text-center mb-12 md:mb-16 lg:mb-20">
           <div className="inline-flex items-center gap-3 bg-black/5 text-black px-6 py-3 rounded-full text-sm font-medium mb-8 border border-black/10">
             <MessageSquare className="w-5 h-5 text-[#FACC15]" />
-            <span>Fonctionnalités</span>
+            <span>{t('badge')}</span>
           </div>
           
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 leading-tight">
-            Tout pour automatiser vos <span className="text-[#FACC15]">communications clients</span>
+            {t('title')} <span className="text-[#FACC15]">{t('titleHighlight')}</span>
           </h1>
           <p className="text-lg md:text-xl text-black/80 max-w-4xl mx-auto leading-relaxed font-medium">
-            Découvrez les fonctionnalités qui transforment votre façon de communiquer avec vos clients. Simples, puissantes et conçues pour les commerces africains.
+            {t('subtitle')}
           </p>
         </div>
 
         {/* Features Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => {
+          {features.map((feature: FeatureItem, index: number) => {
             const IconComponent = feature.icon;
             return (
               <div
@@ -89,7 +82,7 @@ const Features = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <a href="#pricing" className="bg-black text-white hover:bg-black/90 transition-all duration-300 rounded-full px-8 md:px-12 py-3 md:py-4 text-lg md:text-xl font-bold hover:scale-105 transform cursor-pointer inline-block">
-            Prendre un pack maintenant
+            {t('cta')}
           </a>
         </div>
       </div>

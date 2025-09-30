@@ -1,0 +1,280 @@
+{
+  "metadata": {
+    "title": "Bizuri - Automatisez vos communications clients",
+    "description": "Automatisez vos campagnes WhatsApp et Telegram, fidélisez votre clientèle et boostez vos ventes en quelques clics."
+  },
+  "navigation": {
+    "features": "Fonctionnalités",
+    "howItWorks": "Comment ça marche",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "seePackages": "Voir les tarifs"
+  },
+  "hero": {
+    "title": "Vos clients reviennent,",
+    "titleHighlight": "vos ventes explosent",
+    "subtitle": "Automatisez vos campagnes WhatsApp et Telegram, fidélisez votre clientèle et boostez vos ventes en quelques clics. Simple, rapide, efficace.",
+    "ctaPrimary": "Prendre un pack maintenant",
+    "ctaSecondary": "Voir la démo (2 min)",
+    "videoAltText": "Votre navigateur ne supporte pas la lecture de vidéos."
+  },
+  "features": {
+    "badge": "Fonctionnalités",
+    "title": "Tout pour automatiser vos",
+    "titleHighlight": "communications clients",
+    "subtitle": "Découvrez les fonctionnalités qui transforment votre façon de communiquer avec vos clients. Simples, puissantes et conçues pour les commerces africains.",
+    "cta": "Prendre un pack maintenant",
+    "items": [
+      {
+        "title": "Configuration bots WhatsApp & Telegram",
+        "subtitle": "Créez vos canaux de communication en quelques clics. Connectez votre boutique instantanément aux messageries préférées de vos clients."
+      },
+      {
+        "title": "Gestion clientèle centralisée",
+        "subtitle": "Enregistrez et organisez tous vos clients dans une base unique. Segmentez facilement pour des campagnes ciblées et personnalisées."
+      },
+      {
+        "title": "Campagnes promotionnelles automatisées",
+        "subtitle": "Créez des promotions et événements personnalisés avec vos propres champs. Envoyez tout instantanément à vos listes clients."
+      },
+      {
+        "title": "Vente de produits intégrée",
+        "subtitle": "Publiez vos produits avec descriptions, prix et conditions de livraison. Gérez les commandes directement depuis la plateforme."
+      },
+      {
+        "title": "Messages de relance intelligents",
+        "subtitle": "Automatisez le suivi client avec des rappels personnalisés. Relancez les prospects et fidélisez automatiquement vos acheteurs."
+      },
+      {
+        "title": "Dashboard complet multi-admin",
+        "subtitle": "Gérez plusieurs administrateurs, suivez vos performances en temps réel et personnalisez entièrement votre compte entreprise."
+      }
+    ]
+  },
+  "howItWorks": {
+    "badge": "Comment ça marche",
+    "title": "Démarrez en",
+    "titleHighlight": "4 étapes simples",
+    "subtitle": "De l'inscription à vos premières ventes automatisées, découvrez comment Bizuri transforme votre communication client en quelques minutes.",
+    "cta": "Prendre un pack maintenant",
+    "steps": [
+      {
+        "title": "Inscrivez-vous et configurez vos bots",
+        "description": "Créez votre compte en 2 minutes et connectez automatiquement vos bots WhatsApp et Telegram. Configuration guidée et assistance en direct."
+      },
+      {
+        "title": "Importez vos clients et segmentez",
+        "description": "Ajoutez facilement vos clients existants ou importez vos listes. Créez des segments pour des campagnes ciblées selon vos critères."
+      },
+      {
+        "title": "Lancez vos premières campagnes",
+        "description": "Créez vos promotions et événements personnalisés en quelques clics. Envoyez instantanément à tous vos clients via WhatsApp et Telegram."
+      },
+      {
+        "title": "Automatisez et développez vos ventes",
+        "description": "Activez les relances automatiques, suivez vos performances en temps réel et regardez votre chiffre d'affaires augmenter mois après mois."
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Témoignages",
+    "title": "+500 commerces nous",
+    "titleHighlight": "font confiance",
+    "items": [
+      {
+        "name": "Mbaki Luemba",
+        "position": "Propriétaire, Supermarché Central - Kinshasa",
+        "content": "Depuis Bizuri, j'envoie mes promos à 300 clients en 1 clic via WhatsApp. Mon chiffre d'affaires a augmenté de 35% en 2 mois !",
+        "photo": "/avatar.png"
+      },
+      {
+        "name": "Amadou Diallo",
+        "position": "Gérant, Boutique Mode Africaine - Dakar",
+        "content": "Configuration en 5 minutes, mes clients reçoivent tout sur Telegram automatiquement. Plus de perte de temps, plus de ventes !",
+        "photo": "/avatar2.png"
+      },
+      {
+        "name": "Sarah Kouame",
+        "position": "Directrice, Pharmacie Santé Plus - Abidjan",
+        "content": "Les relances automatiques m'ont fait récupérer 40% de clients perdus. Bizuri paie déjà son investissement au premier mois.",
+        "photo": "/avatar3.png"
+      },
+      {
+        "name": "Jean-Paul Makaya",
+        "position": "CEO, Épicerie Moderne - Brazzaville",
+        "content": "Interface simple, résultats immédiats. Mes campagnes atteignent 500+ clients instantanément. Indispensable !",
+        "photo": "/avatar4.png"
+      },
+      {
+        "name": "Fatima Ben Ali",
+        "position": "Fondatrice, Bazar Al-Maghrib - Casablanca",
+        "content": "Bizuri a automatisé toute ma communication client. Je me concentre sur mon business, les ventes suivent naturellement.",
+        "photo": "/avatar5.png"
+      }
+    ]
+  },
+  "pricing": {
+    "badge": "Tarification",
+    "title": "Choisissez le pack qui",
+    "titleHighlight": "booste vos ventes",
+    "subtitle": "Des tarifs transparents, pas de frais cachés. Commencez petit et évoluez selon vos ambitions. Chaque pack inclut tout pour automatiser vos communications.",
+    "billing": {
+      "monthly": "Mensuel",
+      "yearly": "Annuel",
+      "month": "mois",
+      "year": "an",
+      "yearlyDiscount": "-16%",
+      "popularBadge": "Le plus populaire",
+      "perMonth": "/mois",
+      "perYear": "/an",
+      "orPerMonth": "Soit {price}€/mois",
+      "billedAnnually": "Facturé annuellement"
+    },
+    "plans": {
+      "freemium": {
+        "name": "Freemium",
+        "monthlyPrice": "14",
+        "annualPrice": "140",
+        "description": "Parfait pour tester et démarrer votre automatisation",
+        "features": [
+          "Jusqu'à 150 clients",
+          "Bots WhatsApp et Telegram",
+          "5 campagnes/mois",
+          "3 événements personnalisés/mois",
+          "Support par email",
+          "1 administrateur"
+        ],
+        "cta": "Commencer maintenant"
+      },
+      "premium": {
+        "name": "Premium",
+        "monthlyPrice": "25",
+        "annualPrice": "250",
+        "description": "La solution complète pour développer votre business",
+        "features": [
+          "Jusqu'à 400 clients",
+          "Bots WhatsApp et Telegram avancés",
+          "Campagnes illimitées",
+          "Événements illimités",
+          "Support immédiat (chat)",
+          "3 administrateurs",
+          "Relances automatiques",
+          "Analytics détaillés"
+        ],
+        "cta": "Prendre Premium",
+        "popular": true
+      },
+      "vip": {
+        "name": "VIP",
+        "monthlyPrice": "99",
+        "annualPrice": "990",
+        "description": "Solution avancée pour les grandes entreprises",
+        "features": [
+          "1000+ clients illimités",
+          "Multi-canaux premium",
+          "Campagnes & événements illimités",
+          "Automatisation avancée",
+          "Support premium 24/7",
+          "Administrateurs illimités",
+          "API personnalisée",
+          "Manager dédié",
+          "Formation personnalisée",
+          "Intégrations sur mesure"
+        ],
+        "cta": "Prendre VIP"
+      }
+    }
+  },
+  "faq": {
+    "badge": "FAQ",
+    "title": "Questions",
+    "titleHighlight": "fréquentes",
+    "subtitle": "Trouvez rapidement les réponses à vos questions. Notre équipe est là pour vous accompagner dans votre réussite.",
+    "items": [
+      {
+        "question": "Comment ça marche concrètement ?",
+        "answer": "Vous vous inscrivez en 2 minutes, connectez vos bots WhatsApp et Telegram automatiquement, ajoutez vos clients et envoyez vos premières campagnes instantanément. Tout est guidé et notre support vous aide si besoin."
+      },
+      {
+        "question": "Mes clients doivent-ils installer quelque chose ?",
+        "answer": "Non ! Vos clients reçoivent vos messages directement sur WhatsApp et Telegram qu'ils utilisent déjà. Aucune app à télécharger, aucune inscription supplémentaire requise."
+      },
+      {
+        "question": "Est-ce que c'est compliqué à configurer ?",
+        "answer": "Pas du tout ! Notre interface est conçue pour être simple. Configuration des bots en 1 clic, ajout de clients par import ou manuellement, création de campagnes en quelques clics. Si vous savez envoyer un SMS, vous savez utiliser Bizuri."
+      },
+      {
+        "question": "Puis-je vraiment envoyer à tous mes clients d'un coup ?",
+        "answer": "Oui ! Une fois vos clients enregistrés, vous créez votre promotion/événement et l'envoyez instantanément à toute votre liste via WhatsApp et Telegram. En 30 secondes, tous vos clients sont informés."
+      },
+      {
+        "question": "Combien ça coûte vraiment ?",
+        "answer": "Freemium 14$/mois (150 clients), Premium 25$/mois (400 clients), VIP 99$/mois (1000+ clients). Pas de frais cachés, pas d'engagement. Annulez quand vous voulez, gardez vos données."
+      },
+      {
+        "question": "Mes données client sont-elles sécurisées ?",
+        "answer": "Absolument ! Cryptage SSL, serveurs sécurisés, conformité RGPD. Vos données vous appartiennent, nous ne les partageons jamais. Vous pouvez exporter et supprimer vos données à tout moment."
+      },
+      {
+        "question": "Et si ça ne marche pas pour mon commerce ?",
+        "answer": "Notre solution fonctionne pour tous types de commerces : supermarchés, boutiques, pharmacies, restaurants... Plus de 500 commerces nous font confiance. Notre support vous accompagne pour adapter Bizuri à vos besoins spécifiques."
+      },
+      {
+        "question": "Y a-t-il un support et de la formation ?",
+        "answer": "Oui ! Formation gratuite incluse, documentation complète en français, support par chat (Premium) ou email. Notre équipe francophone basée en Afrique comprend vos enjeux et vous aide à réussir."
+      }
+    ]
+  },
+  "contact": {
+    "badge": "Prêt à commencer",
+    "title": "Prêt à automatiser et",
+    "titleHighlight": "booster vos ventes ?",
+    "subtitle": "Rejoignez les centaines de commerçants qui automatisent leurs communications et voient leurs ventes exploser. Votre succès commence maintenant !",
+    "cta": "Prendre un pack maintenant"
+  },
+  "partners": {
+    "badge": "Partenaires",
+    "title": "Ils nous font",
+    "titleHighlight": "confiance"
+  },
+  "footer": {
+    "description": "Automatisez vos communications clients et boostez vos ventes avec notre plateforme tout-en-un.",
+    "links": {
+      "product": {
+        "title": "Produit",
+        "items": [
+          "Fonctionnalités",
+          "Tarifs",
+          "Démo"
+        ]
+      },
+      "support": {
+        "title": "Support",
+        "items": [
+          "Centre d'aide",
+          "Documentation",
+          "Contact"
+        ]
+      },
+      "company": {
+        "title": "Entreprise",
+        "items": [
+          "À propos",
+          "Blog",
+          "Carrières"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Commencer",
+      "description": "Prêt à révolutionner votre gestion client ? Choisissez votre plan maintenant.",
+      "button": "Voir les forfaits"
+    },
+    "copyright": "© 2024 Bizuri. Tous droits réservés.",
+    "legal": {
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation"
+    }
+  }
+}

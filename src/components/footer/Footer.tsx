@@ -1,9 +1,10 @@
 "use client"
 import { Facebook, Twitter, Instagram, Linkedin, ArrowRight } from "lucide-react"
+import { useTranslations } from 'next-intl'
 
 export function Footer() {
+  const t = useTranslations('footer')
 
-  
   return (
     <footer className="relative w-full px-6 py-16 overflow-hidden bg-black">
       {/* Floating Elements */}
@@ -22,7 +23,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <div className="text-3xl font-black text-white mb-4">Bizuri</div>
             <p className="text-white/80 text-sm leading-relaxed mb-6 max-w-xs">
-              La solution SaaS pensée pour fidéliser vos clients en Afrique. Simple, moderne et efficace.
+              {t('description')}
             </p>
             <div className="flex gap-4">
               <a href="#" className="w-10 h-10 bg-[#FACC15] hover:bg-[#F59E0B] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110 cursor-pointer">
@@ -42,45 +43,42 @@ export function Footer() {
 
           {/* Bloc 2 - Navigation principale */}
           <div className="lg:col-span-1">
-            <h3 className="text-white font-bold text-lg mb-4">Navigation</h3>
+            <h3 className="text-white font-bold text-lg mb-4">{t('links.product.title')}</h3>
             <ul className="space-y-3">
-              <li><a href="#features" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">Fonctionnalités</a></li>
-              <li><a href="#how-it-works" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">Comment ça marche</a></li>
-              <li><a href="#pricing" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">Tarifs</a></li>
-              <li><a href="#faq" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">Questions fréquentes</a></li>
-              <li><a href="#contact" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">Contact</a></li>
+              {t.raw('links.product.items').map((item: string, index: number) => (
+                <li key={index}><a href="#features" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">{item}</a></li>
+              ))}
             </ul>
           </div>
 
           {/* Bloc 3 - Support */}
           <div className="lg:col-span-1">
-            <h3 className="text-white font-bold text-lg mb-4">Support</h3>
+            <h3 className="text-white font-bold text-lg mb-4">{t('links.support.title')}</h3>
             <ul className="space-y-3">
-              <li><a href="#contact" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">Centre d&apos;aide</a></li>
-              <li><a href="#contact" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">Nous contacter</a></li>
-              <li><a href="#faq" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">Documentation</a></li>
+              {t.raw('links.support.items').map((item: string, index: number) => (
+                <li key={index}><a href="#contact" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">{item}</a></li>
+              ))}
             </ul>
           </div>
 
           {/* Bloc 4 - Légal */}
           <div className="lg:col-span-1">
-            <h3 className="text-white font-bold text-lg mb-4">Légal</h3>
+            <h3 className="text-white font-bold text-lg mb-4">{t('links.company.title')}</h3>
             <ul className="space-y-3">
-              <li><a href="#" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">Conditions d&apos;utilisation</a></li>
-              <li><a href="#" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">Politique de confidentialité</a></li>
-              <li><a href="#" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">Mentions légales</a></li>
-              <li><a href="#" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">CGV</a></li>
+              {t.raw('links.company.items').map((item: string, index: number) => (
+                <li key={index}><a href="#" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">{item}</a></li>
+              ))}
             </ul>
           </div>
 
           {/* Bloc 5 - Call to Action */}
           <div className="lg:col-span-1">
-            <h3 className="text-white font-bold text-lg mb-4">Commencer</h3>
+            <h3 className="text-white font-bold text-lg mb-4">{t('cta.title')}</h3>
             <p className="text-white/80 text-sm mb-6">
-              Prêt à révolutionner votre gestion client ? Choisissez votre plan maintenant.
+              {t('cta.description')}
             </p>
             <a href="#pricing" className="group bg-[#FACC15] text-black hover:bg-[#F59E0B] transition-all duration-300 rounded-full px-6 py-3 text-sm font-bold inline-flex items-center transform hover:scale-105 cursor-pointer">
-              Voir les tarifs
+              {t('cta.button')}
               <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
@@ -91,15 +89,15 @@ export function Footer() {
           {/* Copyright et liens légaux */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/70 text-sm">
-              © 2024 Bizuri. Tous droits réservés.
+              {t('copyright')}
             </p>
             
             <div className="flex items-center gap-6">
               <a href="#" className="text-white/70 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">
-                Politique de confidentialité
+                {t('legal.privacy')}
               </a>
               <a href="#" className="text-white/70 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">
-                Conditions d&apos;utilisation
+                {t('legal.terms')}
               </a>
             </div>
           </div>

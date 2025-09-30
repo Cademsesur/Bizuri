@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { Star } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 // SVG pour étoile pleine jaune
 const StarFull = () => (
@@ -15,57 +16,54 @@ const StarFull = () => (
   </svg>
 );
 
-// Exemple de témoignages avec photo
-const testimonials = [
-  {
-    name: "Mbaki Luemba",
-    position: "Propriétaire, Supermarché Central - Kinshasa",
-    content:
-      "Depuis Bizuri, j'envoie mes promos à 300 clients en 1 clic via WhatsApp. Mon chiffre d'affaires a augmenté de 35% en 2 mois !",
-    photo: "/avatar.png",
-  },
-  {
-    name: "Amadou Diallo",
-    position: "Gérant, Boutique Mode Africaine - Dakar",
-    content:
-      "Configuration en 5 minutes, mes clients reçoivent tout sur Telegram automatiquement. Plus de perte de temps, plus de ventes !",
-    photo: "/avatar2.png",
-  },
-  {
-    name: "Sarah Kouame",
-    position: "Directrice, Pharmacie Santé Plus - Abidjan",
-    content:
-      "Les relances automatiques m'ont fait récupérer 40% de clients perdus. Bizuri paie déjà son investissement au premier mois.",
-    photo: "/avatar3.png",
-  },
-  {
-    name: "Jean-Paul Makaya",
-    position: "CEO, Épicerie Moderne - Brazzaville",
-    content: "Interface simple, résultats immédiats. Mes campagnes atteignent 500+ clients instantanément. Indispensable !",
-    photo: "/avatar4.png",
-  },
-  {
-    name: "Fatima Ben Ali",
-    position: "Fondatrice, Bazar Al-Maghrib - Casablanca",
-    content: "Bizuri a automatisé toute ma communication client. Je me concentre sur mon business, les ventes suivent naturellement.",
-    photo: "/avatar5.png",
-  },
-];
-
 export function TestimonialsSection() {
+  const t = useTranslations('testimonials');
+  
+  const testimonials = [
+    {
+      name: t('items.0.name'),
+      position: t('items.0.position'),
+      content: t('items.0.content'),
+      photo: t('items.0.photo'),
+    },
+    {
+      name: t('items.1.name'),
+      position: t('items.1.position'),
+      content: t('items.1.content'),
+      photo: t('items.1.photo'),
+    },
+    {
+      name: t('items.2.name'),
+      position: t('items.2.position'),
+      content: t('items.2.content'),
+      photo: t('items.2.photo'),
+    },
+    {
+      name: t('items.3.name'),
+      position: t('items.3.position'),
+      content: t('items.3.content'),
+      photo: t('items.3.photo'),
+    },
+    {
+      name: t('items.4.name'),
+      position: t('items.4.position'),
+      content: t('items.4.content'),
+      photo: t('items.4.photo'),
+    },
+  ];
   return (
     <section className="w-full bg-white py-12 md:py-16 lg:py-20">
       {/* Titre et sous-titre */}
       <div className="text-center mb-10 md:mb-12 lg:mb-16 px-4 md:px-6 lg:px-8">
         <div className="inline-flex items-center gap-3 bg-black/5 text-black px-6 py-3 rounded-full text-sm font-medium mb-8 border border-black/10">
           <Star className="w-5 h-5 text-[#FACC15]" />
-          <span>Témoignages</span>
+          <span>{t('badge')}</span>
         </div>
         
         <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-black mb-6 leading-tight">
-          +500 commerces nous{' '}
+          {t('title')}{' '}
           <span className="text-[#FACC15]">
-            font confiance
+            {t('titleHighlight')}
           </span>
         </h2>
       </div>
