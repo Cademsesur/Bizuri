@@ -52,9 +52,13 @@ export function TestimonialsSection() {
     },
   ];
   return (
-    <section className="w-full bg-white py-12 md:py-16 lg:py-20">
+    <section className="w-full bg-white py-12 md:py-16 lg:py-20 relative overflow-hidden">
+      {/* Blocs de marges/tunnels gauche et droite - plus rapprochés du centre */}
+      <div className="absolute inset-y-0 left-0 w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 bg-gradient-to-r from-white via-white/95 to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute inset-y-0 right-0 w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 bg-gradient-to-l from-white via-white/95 to-transparent z-10 pointer-events-none"></div>
+      
       {/* Titre et sous-titre */}
-      <div className="text-center mb-10 md:mb-12 lg:mb-16 px-4 md:px-6 lg:px-8">
+      <div className="text-center mb-10 md:mb-12 lg:mb-16 px-4 md:px-6 lg:px-8 relative z-20">
         <div className="inline-flex items-center gap-3 bg-black/5 text-black px-6 py-3 rounded-full text-sm font-medium mb-8 border border-black/10">
           <Star className="w-5 h-5 text-[#FACC15]" />
           <span>{t('badge')}</span>
@@ -68,26 +72,33 @@ export function TestimonialsSection() {
         </h2>
       </div>
 
-      {/* Ligne 1 */}
+      {/* Ligne 1 - Animation avec effet de débordement */}
       <div className="relative overflow-hidden mb-6 md:mb-8">
-        <div className="flex animate-scroll-left gap-6">
+        {/* Extension gauche pour effet tunnel - plus rapprochée */}
+        <div className="absolute left-0 top-0 h-full w-24 md:w-40 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        {/* Extension droite pour effet tunnel - plus rapprochée */}
+        <div className="absolute right-0 top-0 h-full w-24 md:w-40 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+        
+        <div className="flex animate-scroll-left gap-6 -ml-12 sm:-ml-20 md:-ml-32 lg:-ml-40">
           {[...Array(3)].flatMap((_, groupIndex) => 
             testimonials.map((t, idx) => (
               <div
                 key={`top-${groupIndex}-${idx}`}
-                className="relative bg-black text-white rounded-xl p-6 w-[300px] h-[280px] flex flex-col justify-between flex-shrink-0 shadow-lg overflow-hidden"
+                className="relative bg-black text-white rounded-xl p-6 w-[300px] h-[280px] flex flex-col justify-between flex-shrink-0 shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
               >
                 {/* Content */}
                 <div className="relative z-10 flex flex-col h-full justify-between">
                   {/* Photo et infos */}
                   <div className="flex items-center mb-2">
-                    <Image 
-                      src={t.photo} 
-                      alt={t.name}
-                      width={48}
-                      height={48}
-                      className="rounded-full object-cover mr-4"
-                    />
+                    <div className="w-12 h-12 rounded-full overflow-hidden mr-4 flex-shrink-0 bg-gray-200">
+                      <Image 
+                        src={t.photo} 
+                        alt={t.name}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <div className="text-left">
                       <h3 className="text-lg font-semibold mb-1">{t.name}</h3>
                       <span className="text-xs text-gray-300">{t.position}</span>
@@ -112,26 +123,33 @@ export function TestimonialsSection() {
         </div>
       </div>
 
-      {/* Ligne 2 */}
+      {/* Ligne 2 - Animation inverse avec effet de débordement */}
       <div className="relative overflow-hidden">
-        <div className="flex animate-scroll-right gap-6">
+        {/* Extension gauche pour effet tunnel - plus rapprochée */}
+        <div className="absolute left-0 top-0 h-full w-24 md:w-40 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        {/* Extension droite pour effet tunnel - plus rapprochée */}
+        <div className="absolute right-0 top-0 h-full w-24 md:w-40 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+        
+        <div className="flex animate-scroll-right gap-6 -mr-12 sm:-mr-20 md:-mr-32 lg:-mr-40">
           {[...Array(3)].flatMap((_, groupIndex) => 
             testimonials.map((t, idx) => (
               <div
                 key={`bottom-${groupIndex}-${idx}`}
-                className="relative bg-black text-white rounded-xl p-6 w-[300px] h-[280px] flex flex-col justify-between flex-shrink-0 shadow-lg overflow-hidden"
+                className="relative bg-black text-white rounded-xl p-6 w-[300px] h-[280px] flex flex-col justify-between flex-shrink-0 shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300"
               >
                 {/* Content */}
                 <div className="relative z-10 flex flex-col h-full justify-between">
                   {/* Photo et infos */}
                   <div className="flex items-center mb-2">
-                    <Image 
-                      src={t.photo} 
-                      alt={t.name}
-                      width={48}
-                      height={48}
-                      className="rounded-full object-cover mr-4"
-                    />
+                    <div className="w-12 h-12 rounded-full overflow-hidden mr-4 flex-shrink-0 bg-gray-200">
+                      <Image 
+                        src={t.photo} 
+                        alt={t.name}
+                        width={48}
+                        height={48}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <div className="text-left">
                       <h3 className="text-lg font-semibold mb-1">{t.name}</h3>
                       <span className="text-xs text-gray-300">{t.position}</span>

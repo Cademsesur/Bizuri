@@ -13,7 +13,7 @@ export function HeroSection() {
   }, [])
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center px-4 md:px-6 lg:px-8 pt-24 md:pt-32 pb-16 md:pb-20 lg:pb-24 text-center overflow-hidden bg-gradient-to-br from-[#FACC15] via-[#FCD34D] to-[#F59E0B]">
+    <section className="relative w-full min-h-screen flex items-center justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-20 sm:pt-24 md:pt-28 lg:pt-32 pb-12 sm:pb-16 md:pb-20 lg:pb-24 text-center overflow-hidden bg-gradient-to-br from-[#FACC15] via-[#FCD34D] to-[#F59E0B]">
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-4 h-4 bg-white rounded-full opacity-70 animate-bounce" style={{animationDelay: '0s'}}></div>
@@ -23,34 +23,32 @@ export function HeroSection() {
       </div>
 
       {/* Content avec animations */}
-      <div className={`relative max-w-5xl mx-auto z-10 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-        
-
-
-        {/* Heading avec gradient text */}
-        <h1 className={`text-5xl md:text-7xl lg:text-8xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-white mb-8 leading-tight tracking-tight transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
+      <div className={`relative max-w-7xl mx-auto z-10 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        {/* Heading avec gradient text - Responsive optimisé */}
+        <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-100 to-white mb-6 sm:mb-6 md:mb-8 leading-[1.1] sm:leading-tight tracking-tight transition-all duration-700 px-2 sm:px-4 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
             style={{animationDelay: '0.4s'}}>
-          {t('title')}
-          <span className="block text-black font-extrabold">
+          <span className="block break-words">
+            {t('title')}
+          </span>
+          <span className="block text-black font-extrabold break-words">
             {t('titleHighlight')}
           </span>
         </h1>
 
-        {/* Subtitle améliorée */}
-        <p className={`text-black/80 text-xl md:text-2xl mb-12 max-w-3xl mx-auto leading-relaxed font-medium transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
+        {/* Subtitle améliorée - Responsive optimisé */}
+        <p className={`text-black/80 text-lg sm:text-xl md:text-2xl lg:text-3xl mb-10 sm:mb-10 md:mb-12 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto leading-relaxed font-medium transition-all duration-700 px-2 sm:px-4 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
            style={{animationDelay: '0.6s'}}>
           {t('subtitle')}
         </p>
 
-        {/* CTA Buttons améliorés */}
-        <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 mb-16 transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
+        {/* CTA Buttons améliorés - Responsive optimisé */}
+        <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-4 md:gap-6 mb-12 sm:mb-14 md:mb-16 transition-all duration-700 px-2 sm:px-4 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
              style={{animationDelay: '0.8s'}}>
           
           <a href="#pricing" 
-             className="group bg-black text-[#FACC15] hover:bg-gray-900 transition-all duration-300 rounded-full px-6 sm:px-8 md:px-10 py-3 md:py-4 text-base sm:text-lg md:text-xl font-bold inline-flex items-center hover:scale-105 transform border-2 border-black/20 whitespace-nowrap w-full sm:w-auto justify-center cursor-pointer">
-            <span className="hidden sm:inline">{t('ctaPrimary')}</span>
-            <span className="sm:hidden">{t('ctaPrimary')}</span>
-            <ArrowRight className="w-5 h-5 md:w-6 md:h-6 ml-2 md:ml-3 transition-transform group-hover:translate-x-1" />
+             className="group bg-black text-[#FACC15] hover:bg-gray-900 transition-all duration-300 rounded-full px-6 sm:px-6 md:px-8 lg:px-10 py-4 sm:py-3.5 md:py-4 text-base sm:text-base md:text-lg lg:text-xl font-bold inline-flex items-center hover:scale-105 transform border-2 border-black/20 w-full sm:w-auto justify-center cursor-pointer max-w-sm sm:max-w-none">
+            <span className="truncate">{t('ctaPrimary')}</span>
+            <ArrowRight className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 ml-3 md:ml-3 transition-transform group-hover:translate-x-1 flex-shrink-0" />
           </a>
 
           <button 
@@ -61,21 +59,20 @@ export function HeroSection() {
                  videoElement.play();
                }
              }}
-             className="group bg-white text-black hover:bg-white/90 transition-all duration-300 rounded-full px-6 sm:px-8 md:px-10 py-3 md:py-4 text-base sm:text-lg md:text-xl font-bold inline-flex items-center hover:scale-105 transform border border-black/10 whitespace-nowrap w-full sm:w-auto justify-center cursor-pointer">
-            <div className="w-6 h-6 md:w-8 md:h-8 mr-2 md:mr-3 bg-black rounded-full flex items-center justify-center">
-              <Play className="w-3 h-3 md:w-4 md:h-4 text-white fill-white ml-0.5" />
+             className="group bg-white text-black hover:bg-white/90 transition-all duration-300 rounded-full px-6 sm:px-6 md:px-8 lg:px-10 py-4 sm:py-3.5 md:py-4 text-base sm:text-base md:text-lg lg:text-xl font-bold inline-flex items-center hover:scale-105 transform border border-black/10 w-full sm:w-auto justify-center cursor-pointer max-w-sm sm:max-w-none">
+            <div className="w-6 h-6 sm:w-6 sm:h-6 md:w-8 md:h-8 mr-3 md:mr-3 bg-black rounded-full flex items-center justify-center flex-shrink-0">
+              <Play className="w-3 h-3 sm:w-3 sm:h-3 md:w-4 md:h-4 text-white fill-white ml-0.5" />
             </div>
-            <span className="hidden sm:inline">{t('ctaSecondary')}</span>
-            <span className="sm:hidden">{t('ctaSecondary')}</span>
+            <span className="truncate">{t('ctaSecondary')}</span>
           </button>
         </div>
 
-        {/* Video Demo Block */}
-        <div className={`mt-16 max-w-2xl lg:max-w-7xl mx-auto transition-all duration-700 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
+        {/* Video Demo Block - Responsive optimisé */}
+        <div className={`mt-12 sm:mt-14 md:mt-16 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto transition-all duration-700 px-1 sm:px-4 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
              style={{animationDelay: '1.2s'}}>
           <div className="relative group">
-            <div className="bg-black/10 rounded-2xl p-2 border border-black/10">
-              <div className="relative overflow-hidden rounded-xl">
+            <div className="bg-black/10 rounded-xl sm:rounded-2xl p-1 sm:p-2 border border-black/10">
+              <div className="relative overflow-hidden rounded-lg sm:rounded-xl">
                 <video
                   ref={videoRef}
                   className="w-full aspect-video object-cover"
@@ -91,8 +88,8 @@ export function HeroSection() {
                 
                 {/* Floating Elements sur la vidéo */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                  <div className="absolute top-4 right-4 w-3 h-3 bg-[#FACC15] rounded-full opacity-70 animate-bounce" style={{animationDelay: '0s'}}></div>
-                  <div className="absolute bottom-4 left-4 w-2 h-2 bg-white rounded-full opacity-60 animate-bounce" style={{animationDelay: '1s'}}></div>
+                  <div className="absolute top-2 sm:top-4 right-2 sm:right-4 w-2 sm:w-3 h-2 sm:h-3 bg-[#FACC15] rounded-full opacity-70 animate-bounce" style={{animationDelay: '0s'}}></div>
+                  <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 w-1.5 sm:w-2 h-1.5 sm:h-2 bg-white rounded-full opacity-60 animate-bounce" style={{animationDelay: '1s'}}></div>
                 </div>
               </div>
             </div>

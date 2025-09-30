@@ -23,11 +23,11 @@ export default function HomePage() {
         <section id="how-it-works">
           <HowItWorksSection />
         </section>
-        <PartnersSection />
         <TestimonialsSection /> 
         <section id="pricing">
           <Pricing />
         </section> 
+          <PartnersSection />
         <section id="faq">
           <FAQ />
         </section>

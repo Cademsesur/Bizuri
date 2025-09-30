@@ -86,7 +86,7 @@
         "name": "Mbaki Luemba",
         "position": "Propriétaire, Supermarché Central - Kinshasa",
         "content": "Depuis Bizuri, j'envoie mes promos à 300 clients en 1 clic via WhatsApp. Mon chiffre d'affaires a augmenté de 35% en 2 mois !",
-        "photo": "/avatar.png"
+        "photo": "/avatar.jpg"
       },
       {
         "name": "Amadou Diallo",
@@ -98,19 +98,19 @@
         "name": "Sarah Kouame",
         "position": "Directrice, Pharmacie Santé Plus - Abidjan",
         "content": "Les relances automatiques m'ont fait récupérer 40% de clients perdus. Bizuri paie déjà son investissement au premier mois.",
-        "photo": "/avatar3.png"
+        "photo": "/avatar3.jpeg"
       },
       {
         "name": "Jean-Paul Makaya",
         "position": "CEO, Épicerie Moderne - Brazzaville",
         "content": "Interface simple, résultats immédiats. Mes campagnes atteignent 500+ clients instantanément. Indispensable !",
-        "photo": "/avatar4.png"
+        "photo": "/avatar4.jpg"
       },
       {
         "name": "Fatima Ben Ali",
         "position": "Fondatrice, Bazar Al-Maghrib - Casablanca",
         "content": "Bizuri a automatisé toute ma communication client. Je me concentre sur mon business, les ventes suivent naturellement.",
-        "photo": "/avatar5.png"
+        "photo": "/avatar.webp"
       }
     ]
   },

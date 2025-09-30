@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTranslations } from 'next-intl';
@@ -9,25 +9,48 @@ import LanguageSelector from "@/components/ui/LanguageSelector";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const t = useTranslations('navigation');
 
-  const navItems = [
-    { name: t('features'), href: "#features" },
-    { name: t('howItWorks'), href: "#how-it-works" },
-    { name: t('pricing'), href: "#pricing" },
-    { name: t('faq'), href: "#faq" },
-    { name: t('contact'), href: "#contact" },
-  ];
+  const navItems = useMemo(() => [
+    { name: t('features'), href: "#features", id: "features" },
+    { name: t('howItWorks'), href: "#how-it-works", id: "how-it-works" },
+    { name: t('pricing'), href: "#pricing", id: "pricing" },
+    { name: t('faq'), href: "#faq", id: "faq" },
+    { name: t('contact'), href: "#contact", id: "contact" },
+  ], [t]);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
       setIsScrolled(scrollPosition > 10);
+      
+      // Détection de la section active
+      const sections = navItems.map(item => item.id);
+      const sectionElements = sections.map(id => document.getElementById(id));
+      
+      let currentActiveSection = '';
+      
+      sectionElements.forEach((section, index) => {
+        if (section) {
+          const rect = section.getBoundingClientRect();
+          const offset = 100; // Offset pour le header fixe
+          
+          if (rect.top <= offset && rect.bottom >= offset) {
+            currentActiveSection = sections[index];
+          }
+        }
+      });
+      
+      setActiveSection(currentActiveSection);
     };
 
     window.addEventListener("scroll", handleScroll);
+    // Appeler une fois au montage pour définir l'état initial
+    handleScroll();
+    
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navItems]);
 
   return (
     <motion.header
@@ -60,24 +83,29 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex gap-8">
-          {navItems.map((item, index) => (
-            <motion.a
-              key={item.name}
-              href={item.href}
-              className={`font-medium transition-colors duration-150 cursor-pointer ${
-                isScrolled 
-                  ? "text-black hover:text-[#FACC15]" 
-                  : "text-black hover:text-[#FACC15]"
-              }`}
-              whileHover={{ y: -2 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {item.name}
-            </motion.a>
-          ))}
+          {navItems.map((item, index) => {
+            const isActive = activeSection === item.id;
+            return (
+              <motion.a
+                key={item.name}
+                href={item.href}
+                className={`font-medium transition-colors duration-150 cursor-pointer ${
+                  isActive 
+                    ? "text-[#FACC15]" 
+                    : isScrolled 
+                      ? "text-black hover:text-[#FACC15]" 
+                      : "text-black hover:text-white"
+                }`}
+                whileHover={{ y: -2 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {item.name}
+              </motion.a>
+            );
+          })}
         </nav>
 
         {/* Desktop CTA */}
@@ -125,20 +153,27 @@ export default function Header() {
             transition={{ duration: 0.25, ease: [0.4, 0.0, 0.2, 1] }}
             className="lg:hidden px-6 pb-6 border-t transition-all duration-150 bg-white/25 backdrop-blur-xl border-white/30 shadow-lg"
           >
-            {navItems.map((item, index) => (
-              <motion.a
-                key={item.name}
-                href={item.href}
-                className="block py-3 font-medium transition-colors duration-150 cursor-pointer text-black hover:text-[#FACC15]"
-                onClick={() => setIsOpen(false)}
-                initial={{ x: -20, opacity: 0 }}
-                animate={{ x: 0, opacity: 1 }}
-                transition={{ delay: index * 0.05 }}
-                whileHover={{ x: 4 }}
-              >
-                {item.name}
-              </motion.a>
-            ))}
+            {navItems.map((item, index) => {
+              const isActive = activeSection === item.id;
+              return (
+                <motion.a
+                  key={item.name}
+                  href={item.href}
+                  className={`block py-3 font-medium transition-colors duration-150 cursor-pointer ${
+                    isActive 
+                      ? "text-[#FACC15]" 
+                      : "text-black hover:text-[#FACC15]"
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                  initial={{ x: -20, opacity: 0 }}
+                  animate={{ x: 0, opacity: 1 }}
+                  transition={{ delay: index * 0.05 }}
+                  whileHover={{ x: 4 }}
+                >
+                  {item.name}
+                </motion.a>
+              );
+            })}
             
             <div className="mt-4">
               <LanguageSelector />

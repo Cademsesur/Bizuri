@@ -45,9 +45,8 @@ export function Footer() {
           <div className="lg:col-span-1">
             <h3 className="text-white font-bold text-lg mb-4">{t('links.product.title')}</h3>
             <ul className="space-y-3">
-              {t.raw('links.product.items').map((item: string, index: number) => (
-                <li key={index}><a href="#features" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">{item}</a></li>
-              ))}
+              <li><a href="#features" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">{t('links.product.items.0')}</a></li>
+              <li><a href="#pricing" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">{t('links.product.items.1')}</a></li>
             </ul>
           </div>
 
@@ -55,19 +54,17 @@ export function Footer() {
           <div className="lg:col-span-1">
             <h3 className="text-white font-bold text-lg mb-4">{t('links.support.title')}</h3>
             <ul className="space-y-3">
-              {t.raw('links.support.items').map((item: string, index: number) => (
-                <li key={index}><a href="#contact" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">{item}</a></li>
-              ))}
+              <li><a href="#faq" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">{t('links.support.items.0')}</a></li>
+              <li><a href="#contact" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">{t('links.support.items.2')}</a></li>
             </ul>
           </div>
 
-          {/* Bloc 4 - Légal */}
+          {/* Bloc 4 - Comment ça marche */}
           <div className="lg:col-span-1">
-            <h3 className="text-white font-bold text-lg mb-4">{t('links.company.title')}</h3>
+            <h3 className="text-white font-bold text-lg mb-4">Navigation</h3>
             <ul className="space-y-3">
-              {t.raw('links.company.items').map((item: string, index: number) => (
-                <li key={index}><a href="#" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">{item}</a></li>
-              ))}
+              <li><a href="#how-it-works" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">Comment ça marche</a></li>
+              <li><a href="#features" className="text-white/80 hover:text-[#FACC15] transition-colors duration-300 text-sm cursor-pointer">Fonctionnalités</a></li>
             </ul>
           </div>
 
