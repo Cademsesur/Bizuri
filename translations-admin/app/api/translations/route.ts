@@ -46,10 +46,10 @@ export async function POST(request: NextRequest) {
     }
 
     // Rebuild the JSON structures
-    const frData: any = {};
-    const enData: any = {};
+    const frData: Record<string, unknown> = {};
+    const enData: Record<string, unknown> = {};
 
-    translations.forEach((translation: any) => {
+    translations.forEach((translation: { key: string; fr: string; en: string }) => {
       setValue(frData, translation.key, translation.fr);
       setValue(enData, translation.key, translation.en);
     });
@@ -77,9 +77,9 @@ export async function POST(request: NextRequest) {
   }
 }
 
-function setValue(obj: any, path: string, value: string): void {
+function setValue(obj: Record<string, unknown>, path: string, value: string): void {
   const keys = path.split('.');
-  let current = obj;
+  let current: Record<string, unknown> = obj;
   
   keys.forEach((key, index) => {
     if (index === keys.length - 1) {
@@ -88,7 +88,7 @@ function setValue(obj: any, path: string, value: string): void {
       if (!current[key]) {
         current[key] = {};
       }
-      current = current[key];
+      current = current[key] as Record<string, unknown>;
     }
   });
 }

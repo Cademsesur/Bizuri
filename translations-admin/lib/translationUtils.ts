@@ -68,15 +68,19 @@ export function mergeTranslations(frData: TranslationData, enData: TranslationDa
   });
 }
 
-function getValue(obj: any, path: string): string {
-  return path.split('.').reduce((current, key) => {
-    return current && current[key] !== undefined ? current[key] : '';
-  }, obj);
+function getValue(obj: Record<string, unknown>, path: string): string {
+  return path.split('.').reduce((current: unknown, key: string) => {
+    if (current && typeof current === 'object' && current !== null) {
+      const objCurrent = current as Record<string, unknown>;
+      return objCurrent[key] !== undefined ? objCurrent[key] : '';
+    }
+    return '';
+  }, obj) as string;
 }
 
-export function setValue(obj: any, path: string, value: string): void {
+export function setValue(obj: Record<string, unknown>, path: string, value: string): void {
   const keys = path.split('.');
-  let current = obj;
+  let current: Record<string, unknown> = obj;
   
   keys.forEach((key, index) => {
     if (index === keys.length - 1) {
@@ -85,7 +89,7 @@ export function setValue(obj: any, path: string, value: string): void {
       if (!current[key]) {
         current[key] = {};
       }
-      current = current[key];
+      current = current[key] as Record<string, unknown>;
     }
   });
 }

@@ -97,7 +97,7 @@ const Sidebar = React.forwardRef<
     collapsible?: "offcanvas" | "icon" | "none"
   }
 >(({ side = "left", variant = "sidebar", collapsible = "offcanvas", className, children, ...props }, ref) => {
-  const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
+  const { isMobile, state } = useSidebar()
 
   if (collapsible === "none") {
     return (
@@ -311,7 +311,7 @@ const SidebarMenuButton = React.forwardRef<
     variant?: "default" | "outline"
     size?: "default" | "sm" | "lg"
   }
->(({ asChild = false, isActive = false, variant = "default", size = "default", className, ...props }, ref) => {
+>(({ isActive = false, size = "default", className, ...props }, ref) => {
   return (
     <button
       ref={ref}
