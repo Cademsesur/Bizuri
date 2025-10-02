@@ -1,24 +1,25 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { promises as fs } from 'fs';
-import path from 'path';
 import { mergeTranslations } from '@/lib/translationUtils';
 
-const LANDING_PAGE_PATH = path.join(process.cwd(), '..', 'landing-bizuri', 'messages');
+// URL de l'API du projet landing-bizuri
+const LANDING_API_URL = process.env.LANDING_API_URL || 'http://localhost:3000';
 
 export async function GET() {
   try {
-    const frPath = path.join(LANDING_PAGE_PATH, 'fr.json');
-    const enPath = path.join(LANDING_PAGE_PATH, 'en.json');
+    // Appel à l'API du projet landing
+    const response = await fetch(`${LANDING_API_URL}/api/translations`);
+    
+    if (!response.ok) {
+      throw new Error(`Failed to fetch from landing API: ${response.status}`);
+    }
+    
+    const data = await response.json();
+    
+    if (!data.success) {
+      throw new Error('Landing API returned error');
+    }
 
-    const [frContent, enContent] = await Promise.all([
-      fs.readFile(frPath, 'utf-8'),
-      fs.readFile(enPath, 'utf-8')
-    ]);
-
-    const frData = JSON.parse(frContent);
-    const enData = JSON.parse(enContent);
-
-    const mergedTranslations = mergeTranslations(frData, enData);
+    const mergedTranslations = mergeTranslations(data.fr, data.en);
 
     return NextResponse.json({
       success: true,
@@ -54,14 +55,24 @@ export async function POST(request: NextRequest) {
       setValue(enData, translation.key, translation.en);
     });
 
-    // Write the files
-    const frPath = path.join(LANDING_PAGE_PATH, 'fr.json');
-    const enPath = path.join(LANDING_PAGE_PATH, 'en.json');
+    // Envoyer les données à l'API du projet landing
+    const response = await fetch(`${LANDING_API_URL}/api/translations`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ fr: frData, en: enData }),
+    });
 
-    await Promise.all([
-      fs.writeFile(frPath, JSON.stringify(frData, null, 2), 'utf-8'),
-      fs.writeFile(enPath, JSON.stringify(enData, null, 2), 'utf-8')
-    ]);
+    if (!response.ok) {
+      throw new Error(`Failed to save to landing API: ${response.status}`);
+    }
+
+    const result = await response.json();
+    
+    if (!result.success) {
+      throw new Error('Landing API returned error');
+    }
 
     return NextResponse.json({
       success: true,
