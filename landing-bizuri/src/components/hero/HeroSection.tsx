@@ -42,11 +42,11 @@ export function HeroSection() {
         </p>
 
         {/* CTA Buttons améliorés - Responsive optimisé */}
-        <div className={`flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-4 md:gap-6 mb-12 sm:mb-14 md:mb-16 transition-all duration-700 px-2 sm:px-4 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
+        <div className={`flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6 mb-12 sm:mb-14 md:mb-16 transition-all duration-700 px-2 sm:px-4 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-5 opacity-0'}`}
              style={{animationDelay: '0.8s'}}>
           
           <a href="#pricing" 
-             className="group bg-black text-[#FACC15] hover:bg-gray-900 transition-all duration-300 rounded-full px-6 sm:px-6 md:px-8 lg:px-10 py-4 sm:py-3.5 md:py-4 text-base sm:text-base md:text-lg lg:text-xl font-bold inline-flex items-center hover:scale-105 transform border-2 border-black/20 w-full sm:w-auto justify-center cursor-pointer max-w-sm sm:max-w-none">
+             className="group bg-black text-[#FACC15] hover:bg-gray-900 transition-all duration-300 rounded-full px-6 sm:px-6 md:px-8 lg:px-10 py-4 sm:py-3.5 md:py-4 text-base sm:text-base md:text-lg lg:text-xl font-bold inline-flex items-center hover:scale-105 transform border-2 border-black/20 w-full lg:w-auto max-w-sm lg:max-w-none justify-center cursor-pointer">
             <span className="truncate">{t('ctaPrimary')}</span>
             <ArrowRight className="w-5 h-5 sm:w-5 sm:h-5 md:w-6 md:h-6 ml-3 md:ml-3 transition-transform group-hover:translate-x-1 flex-shrink-0" />
           </a>
@@ -59,7 +59,7 @@ export function HeroSection() {
                  videoElement.play();
                }
              }}
-             className="group bg-white text-black hover:bg-white/90 transition-all duration-300 rounded-full px-6 sm:px-6 md:px-8 lg:px-10 py-4 sm:py-3.5 md:py-4 text-base sm:text-base md:text-lg lg:text-xl font-bold inline-flex items-center hover:scale-105 transform border border-black/10 w-full sm:w-auto justify-center cursor-pointer max-w-sm sm:max-w-none">
+             className="group bg-white text-black hover:bg-white/90 transition-all duration-300 rounded-full px-6 sm:px-6 md:px-8 lg:px-10 py-4 sm:py-3.5 md:py-4 text-base sm:text-base md:text-lg lg:text-xl font-bold inline-flex items-center hover:scale-105 transform border border-black/10 w-full lg:w-auto max-w-sm lg:max-w-none justify-center cursor-pointer">
             <div className="w-6 h-6 sm:w-6 sm:h-6 md:w-8 md:h-8 mr-3 md:mr-3 bg-black rounded-full flex items-center justify-center flex-shrink-0">
               <Play className="w-3 h-3 sm:w-3 sm:h-3 md:w-4 md:h-4 text-white fill-white ml-0.5" />
             </div>

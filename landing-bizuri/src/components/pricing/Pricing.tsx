@@ -9,6 +9,17 @@ const Pricing = () => {
   const [isAnnual, setIsAnnual] = useState(false);
   const t = useTranslations('pricing');
 
+  // Helper function to convert features object to array
+  const getFeaturesArray = (featuresObj: unknown): string[] => {
+    if (Array.isArray(featuresObj)) {
+      return featuresObj;
+    }
+    if (typeof featuresObj === 'object' && featuresObj !== null) {
+      return Object.values(featuresObj);
+    }
+    return [];
+  };
+
   const plans = [
     {
       name: t('plans.freemium.name'),
@@ -16,7 +27,7 @@ const Pricing = () => {
       annualPrice: t('plans.freemium.annualPrice'),
       description: t('plans.freemium.description'),
       icon: Zap,
-      features: t.raw('plans.freemium.features'),
+      features: getFeaturesArray(t.raw('plans.freemium.features')),
       isPopular: false,
       buttonText: t('plans.freemium.cta'),
       buttonStyle: "bg-black text-white hover:bg-black/90"
@@ -27,7 +38,7 @@ const Pricing = () => {
       annualPrice: t('plans.premium.annualPrice'),
       description: t('plans.premium.description'),
       icon: Users,
-      features: t.raw('plans.premium.features'),
+      features: getFeaturesArray(t.raw('plans.premium.features')),
       isPopular: true,
       buttonText: t('plans.premium.cta'),
       buttonStyle: "bg-[#FACC15] text-black hover:bg-[#FACC15]/90"
@@ -38,7 +49,7 @@ const Pricing = () => {
       annualPrice: t('plans.vip.annualPrice'),
       description: t('plans.vip.description'),
       icon: Crown,
-      features: t.raw('plans.vip.features'),
+      features: getFeaturesArray(t.raw('plans.vip.features')),
       isPopular: false,
       buttonText: t('plans.vip.cta'),
       buttonStyle: "bg-black text-white hover:bg-black/90"

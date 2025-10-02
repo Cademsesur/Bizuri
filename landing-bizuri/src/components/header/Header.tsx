@@ -113,7 +113,11 @@ export default function Header() {
           <LanguageSelector />
           <motion.a
             href="#pricing"
-            className="px-6 py-3 rounded-full font-bold transition-all duration-150 cursor-pointer bg-[#FACC15] text-black hover:bg-[#F59E0B]"
+            className={`px-6 py-3 rounded-full font-bold transition-all duration-150 cursor-pointer ${
+              isScrolled 
+                ? "bg-[#FACC15] text-black hover:bg-[#F59E0B]" 
+                : "bg-black text-[#FACC15] hover:bg-gray-900"
+            }`}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 400, damping: 17 }}

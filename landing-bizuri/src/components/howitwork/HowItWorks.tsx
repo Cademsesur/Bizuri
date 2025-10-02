@@ -63,7 +63,7 @@ const HowItWorksSection = () => {
   return (
     <div className="relative bg-white">
       {/* Header Section */}
-      <div className="relative z-10 text-center py-16 md:py-20 lg:py-24 bg-white">
+      <div className="relative z-10 text-center py-20 md:py-28 lg:py-24 bg-white px-6 md:px-8 lg:px-0">
         <div className="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
           <div className="inline-flex items-center gap-3 bg-black/5 text-black px-6 py-3 rounded-full text-sm font-medium mb-8 border border-black/10">
             <Users className="w-5 h-5 text-[#FACC15]" />
@@ -92,7 +92,7 @@ const HowItWorksSection = () => {
             </div>
 
             {/* Content */}
-            <div className="max-w-6xl mx-auto px-6 py-8 w-full relative z-10">
+            <div className="max-w-6xl mx-auto px-6 py-12 md:py-16 lg:py-8 w-full relative z-10">
               <div className={`grid lg:grid-cols-2 gap-12 items-center ${
                 block.reverse ? 'lg:grid-flow-col-dense' : ''
               }`}>

@@ -53,9 +53,9 @@ export function TestimonialsSection() {
   ];
   return (
     <section className="w-full bg-white py-12 md:py-16 lg:py-20 relative overflow-hidden">
-      {/* Blocs de marges/tunnels gauche et droite - plus rapprochés du centre */}
-      <div className="absolute inset-y-0 left-0 w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 bg-gradient-to-r from-white via-white/95 to-transparent z-10 pointer-events-none"></div>
-      <div className="absolute inset-y-0 right-0 w-16 sm:w-24 md:w-32 lg:w-40 xl:w-48 bg-gradient-to-l from-white via-white/95 to-transparent z-10 pointer-events-none"></div>
+      {/* Blocs de marges/tunnels gauche et droite - marges très larges sur ordinateur */}
+      <div className="absolute inset-y-0 left-0 hidden lg:block w-48 xl:w-56 2xl:w-64 bg-gradient-to-r from-white via-white/95 to-transparent z-10 pointer-events-none"></div>
+      <div className="absolute inset-y-0 right-0 hidden lg:block w-48 xl:w-56 2xl:w-64 bg-gradient-to-l from-white via-white/95 to-transparent z-10 pointer-events-none"></div>
       
       {/* Titre et sous-titre */}
       <div className="text-center mb-10 md:mb-12 lg:mb-16 px-4 md:px-6 lg:px-8 relative z-20">
@@ -74,12 +74,12 @@ export function TestimonialsSection() {
 
       {/* Ligne 1 - Animation avec effet de débordement */}
       <div className="relative overflow-hidden mb-6 md:mb-8">
-        {/* Extension gauche pour effet tunnel - plus rapprochée */}
-        <div className="absolute left-0 top-0 h-full w-24 md:w-40 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-        {/* Extension droite pour effet tunnel - plus rapprochée */}
-        <div className="absolute right-0 top-0 h-full w-24 md:w-40 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+        {/* Extension gauche pour effet tunnel - marges très larges */}
+        <div className="absolute left-0 top-0 h-full hidden lg:block w-48 xl:w-56 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        {/* Extension droite pour effet tunnel - marges très larges */}
+        <div className="absolute right-0 top-0 h-full hidden lg:block w-48 xl:w-56 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
         
-        <div className="flex animate-scroll-left gap-6 -ml-12 sm:-ml-20 md:-ml-32 lg:-ml-40">
+        <div className="flex animate-scroll-left gap-6 lg:-ml-48 xl:-ml-56">
           {[...Array(3)].flatMap((_, groupIndex) => 
             testimonials.map((t, idx) => (
               <div
@@ -125,12 +125,12 @@ export function TestimonialsSection() {
 
       {/* Ligne 2 - Animation inverse avec effet de débordement */}
       <div className="relative overflow-hidden">
-        {/* Extension gauche pour effet tunnel - plus rapprochée */}
-        <div className="absolute left-0 top-0 h-full w-24 md:w-40 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
-        {/* Extension droite pour effet tunnel - plus rapprochée */}
-        <div className="absolute right-0 top-0 h-full w-24 md:w-40 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
+        {/* Extension gauche pour effet tunnel - marges très larges */}
+        <div className="absolute left-0 top-0 h-full hidden lg:block w-48 xl:w-56 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none"></div>
+        {/* Extension droite pour effet tunnel - marges très larges */}
+        <div className="absolute right-0 top-0 h-full hidden lg:block w-48 xl:w-56 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none"></div>
         
-        <div className="flex animate-scroll-right gap-6 -mr-12 sm:-mr-20 md:-mr-32 lg:-mr-40">
+        <div className="flex animate-scroll-right gap-6 lg:-mr-48 xl:-mr-56">
           {[...Array(3)].flatMap((_, groupIndex) => 
             testimonials.map((t, idx) => (
               <div

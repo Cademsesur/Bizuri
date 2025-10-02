@@ -2,7 +2,7 @@ import Header from "@/components/header/Header";
 import { HeroSection } from "@/components/hero/HeroSection";
 import Features from "@/components/features/Features";
 import HowItWorksSection from "@/components/howitwork/HowItWorks";
-import { PartnersSection } from "@/components/partners/PartnersSection";
+// import { PartnersSection } from "@/components/partners/PartnersSection";
 import { TestimonialsSection } from "@/components/testimonials/TestimonialsSection";
 import Pricing from "@/components/pricing/Pricing";
 import FAQ from "@/components/faq/Faq";
@@ -25,7 +25,7 @@ export default function HomePage() {
         <section id="pricing">
           <Pricing />
         </section> 
-          <PartnersSection />
+          {/* <PartnersSection /> */}
         <section id="faq">
           <FAQ />
         </section>
